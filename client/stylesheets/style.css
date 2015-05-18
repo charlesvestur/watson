@@ -2,12 +2,16 @@ body {
 	font-family: "Calibri";
 }
 
-.color-active {
+.color-blue-amaya {
 	color: #58B1DB;
 }
 
-.color-passive {
+.color-grey-passive {
 	color: #979797;
+}
+
+.color-blue-regular {
+	color:#4A90E2;
 }
 
 
@@ -20,43 +24,10 @@ body {
 	text-align: center;
 }
 
-#amaya {
-	font-family: "Eight One";
-	font-size: 40px;
-	display: inline-block;
-	height: 50px;
-  	padding: 10px 10px;
-  	line-height: 20px;
-  	color: #58B1DB;
- 
-}
-
-#amaya:hover,
-#amaya:focus {
-  text-decoration: none;
-}
-
-#logo-amaya {
-	width: 50px;
-	height: auto;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-#instruction-home {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	font-size: 30px;
+.box-headline {
+	color: white;
+	background-color: #4A90E2;
 	text-align: center;
 }
 
-#sub-navbar {
-	border: 1px;
-	border-style: solid;
-	border-radius: 10px;
-	border-color: #979797;
-	padding: 10px;
-	margin-left:10px;
-	margin-right: 10px;
 
-}

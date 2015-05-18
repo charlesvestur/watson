@@ -1,0 +1,10 @@
+#sub-navbar {
+	border: 1px;
+	border-style: solid;
+	border-radius: 10px;
+	border-color: #979797;
+	padding: 10px;
+	margin-left:10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}

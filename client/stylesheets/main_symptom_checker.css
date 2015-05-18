@@ -1,0 +1,40 @@
+.headline-symptom-checker {
+	font-size: 20px;
+}
+
+.symbol-gender-reverse {
+	margin: 5px;
+	display: inline-block;
+	vertical-align: middle;
+	}
+
+#human-body {
+	width: 180px;
+	height: auto;
+}
+
+#human-body-frame {
+	padding-bottom: 10px;
+	margin-top:10px; margin-left: 10px; margin-right: 10px;
+	border: 1px;
+	border-style: solid;
+	border-radius: 10px;
+	border-color: #979797; 	
+}
+
+#symptomes-diffus {
+	height: 47px;
+	width: auto;
+	font-size:15px;
+	border:1px solid #4A90E2;
+	border-radius: 5px;
+	padding:5px;
+	margin-left: 10px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#area-of-symptom-selected {
+	margin-top: 10px;
+	margin-right: 20px;
+}
