@@ -5,7 +5,14 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
 insecure
 twbs:bootstrap
 underscore
+materialize:materialize
+aldeed:autoform
+aldeed:collection2
+msavin:mongol
+iron:router
+sacha:spin
+gildaspk:autoform-materialize
+momentjs:moment

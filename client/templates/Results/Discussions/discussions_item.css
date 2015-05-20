@@ -1,0 +1,40 @@
+#size-collapsible-header {
+	height: 90px;
+}
+
+#question-design {
+	font-size: 20px;
+}
+
+#question-block {
+	margin-top: 5px;
+}
+
+#information-question-design {
+	font-size: 15px;
+	text-align: right;
+}
+
+#star {
+	float: right;
+}
+
+#question-headline {
+	font-size: 15px;
+	margin-top: 5px;
+	margin-left: 15px;
+}
+
+#answer-headline {
+	font-size: 15px;
+	margin-top: 5px;
+	margin-left: 15px;
+}
+
+#question-paragraph {
+	padding-top: 2px;
+}
+
+#answer-paragraph {
+	padding-top: 2px;
+}

@@ -1,0 +1,22 @@
+#question-design {
+	font-size: 20px;
+}
+
+#question-block {
+	margin-top: 5px;
+}
+
+#information-question-design {
+	font-size: 15px;
+	text-align: right;
+}
+
+#star {
+	float: right;
+}
+
+#extract-answer-headline {
+	font-size: 15px;
+	margin-top: 5px;
+	margin-left: 15px;
+}

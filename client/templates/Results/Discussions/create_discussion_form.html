@@ -1,0 +1,11 @@
+<template name="CreateDiscussionForm">
+  {{#autoForm collection="Discussions" id="CreateDiscussionForm" type="insert"}}
+    <fieldset>
+      <legend>Posez votre question !</legend>
+      {{> afQuickField name='title'}}
+      {{> afQuickField name='author'}}
+      {{> afQuickField name='question' rows=6}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Poser la question</button>
+  {{/autoForm}}
+</template>

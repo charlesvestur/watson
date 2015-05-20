@@ -1,5 +1,9 @@
-body {
+html {
 	font-family: "Calibri";
+}
+
+a:hover, a:visited, a:active, a:focus {
+	text-decoration: none;
 }
 
 .color-blue-amaya {
@@ -29,5 +33,6 @@ body {
 	background-color: #4A90E2;
 	text-align: center;
 }
+
 
 

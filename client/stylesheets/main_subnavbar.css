@@ -1,3 +1,31 @@
+.stetoscope-stetoscope-active {
+	fill: #58B1DB;
+}
+
+div.stetoscope-stetoscope-active {
+	color:	#58B1DB;
+}
+
+.discussions-results-active {
+	fill: #58B1DB;
+}
+
+.results-results-active {
+	stroke: #58B1DB;
+}
+
+div.results-results-active {
+	color:	#58B1DB;
+}
+
+.feedback-feedback-active {
+	fill: #58B1DB;
+}
+
+div.feedback-feedback-active {
+	color:	#58B1DB;
+}
+
 #sub-navbar {
 	border: 1px;
 	border-style: solid;
