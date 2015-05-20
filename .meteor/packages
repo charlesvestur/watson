@@ -16,3 +16,5 @@ iron:router
 sacha:spin
 gildaspk:autoform-materialize
 momentjs:moment
+accounts-ui
+accounts-password

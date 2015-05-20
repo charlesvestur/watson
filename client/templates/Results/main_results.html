@@ -1,25 +1,26 @@
 <template name="MainResults">
-{{>MainSubnavbar}}
-<div class="color-blue-regular" id="regular-sentence">
-	<span class="highlighted-stats color-blue-amaya">350</span> 
-	cas de 
-	<span class="highlighted-stats color-blue-amaya">grippe</span> 
-	sur 
-	<span class="highlighted-stats color-blue-amaya">1000</span> 
-	personnes ayant eu les mêmes symptômes
-</div>
+	{{> yield "MainSubnavbar"}}	
+	<div class="color-blue-regular" id="regular-sentence">
+		<span class="highlighted-stats color-blue-amaya">350</span> 
+		cas de 
+		<span class="highlighted-stats color-blue-amaya">grippe</span> 
+		sur 
+		<span class="highlighted-stats color-blue-amaya">1000</span> 
+		personnes ayant eu les mêmes symptômes
+	</div>
 
-<div class="col-md-2">
-<div class="box-headline">#hashtags</div>
-</div>
+	<div class="col-md-2">
+		<div class="box-headline">#hashtags</div>
+	</div>
 
-<div class="col-md-7">
-<div class="box-headline">Discussions</div>
-{{> DiscussionsList}}
-</div>
+	<div class="col-md-7">
+		<div class="box-headline">Discussions</div>
+		{{> yield "DiscussionsList"}}
+		{{> CreateDiscussionForm}}
+	</div>
 
-<div class="col-md-3">
-<div class="box-headline">Articles cités</div>
-</div>
+	<div class="col-md-3">
+		<div class="box-headline">Articles cités</div>
+	</div>
 
 </template>
