@@ -1,5 +1,6 @@
-<template name="MainResults">
-	{{> yield "MainSubnavbar"}}	
+<template name="mainResults">
+<div class="overlay"></div>
+	{{> yield region='subnavbar'}}	
 	<div class="color-blue-regular" id="regular-sentence">
 		<span class="highlighted-stats color-blue-amaya">350</span> 
 		cas de 
@@ -15,8 +16,10 @@
 
 	<div class="col-md-7">
 		<div class="box-headline">Discussions</div>
-		{{> yield "DiscussionsList"}}
-		{{> CreateDiscussionForm}}
+		<p id='discutionSubmit'><a href="{{pathFor 'discussionSubmit'}}">Posez une question!</a></p>
+		<div class="discussionsBody">
+			{{> yield region='discussionsBody'}}
+		</div>
 	</div>
 
 	<div class="col-md-3">

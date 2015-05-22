@@ -5,11 +5,9 @@
 # but you can also edit it by hand.
 
 meteor-platform
-insecure
 twbs:bootstrap
 underscore
 materialize:materialize
-aldeed:autoform
 aldeed:collection2
 msavin:mongol
 iron:router
@@ -18,3 +16,5 @@ gildaspk:autoform-materialize
 momentjs:moment
 accounts-ui
 accounts-password
+aldeed:autoform
+ongoworks:security

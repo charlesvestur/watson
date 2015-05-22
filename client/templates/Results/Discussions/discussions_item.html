@@ -1,4 +1,11 @@
-<template name="DiscussionsItem">
+<template name="discussionsItem">
+<script>
+$(document).ready(function(){
+	$('.collapsible').collapsible({
+  	accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+	});
+});
+</script>
 	<ul class="collapsible" data-collapsible="accordion">
 		<li>
 	    <div class="collapsible-header" id="size-collapsible-header"><i class="mdi-image-filter-drama"></i>
@@ -21,13 +28,14 @@
 					</div>
 				</div>
 				<div class="color-grey-passive right-align" id="information-question-design">
-				par 
-				{{author}} - 
+				
+				par  
+				{{author}} -
 				18
 				réponses - 
 				317 
 				votes - Le 
-				27/09/2014
+				{{submitted}}
 				</div>
 		</div>
 		<div class="collapsible-body">

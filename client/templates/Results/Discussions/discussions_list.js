@@ -1,5 +1,7 @@
-Template.DiscussionsList.helpers({
+Template.discussionsList.helpers({
   discussions: function() {
-    return Discussions.find();
+       return Discussions.find(/*{}, {sort: {submitted: -1}}*/);
   }
 });
+
+	
