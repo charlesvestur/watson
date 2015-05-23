@@ -1,0 +1,60 @@
+.headline-discussion-submit-form {
+
+}
+
+
+.position-alignment-categories {
+	display: inline-block;
+	margin-left: 15px;
+	margin-right: 15px;	
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.position-style-categories {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	height: 110px;
+	width: 110px;
+	border: 1px;
+	border-style: solid;
+	border-color: #979797;
+	border-radius: 8px;
+}
+
+.legend-categories {
+	display: block;
+	margin: auto;
+}
+
+.symptoms-symptoms-active {
+	fill: #4A90E2;
+}
+
+div.symptoms-symptoms-active {
+	color:	#4A90E2;
+}
+
+.consultation-consultation-active {
+	fill: #4A90E2;
+}
+
+div.consultation-consultation-active {
+	color:	#4A90E2;
+}
+.traitement-traitement-active {
+	fill: #4A90E2;
+}
+
+div.traitement-traitement-active {
+	color:	#4A90E2;
+}
+
+.convalescence-convalescence-active {
+	fill: #4A90E2;
+}
+
+div.convalescence-convalescence-active {
+	color:	#4A90E2;
+}

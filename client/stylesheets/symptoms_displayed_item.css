@@ -1,0 +1,16 @@
+.div-symptom-displayed {
+	margin-right: 20px;
+	margin-top: 15px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #979797;
+}
+
+#plus-symbol {
+	float:right;	
+}
+
+#symptom-displayed {
+	display:block;
+	margin-bottom: 12px;
+}

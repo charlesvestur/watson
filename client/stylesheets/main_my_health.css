@@ -1,0 +1,29 @@
+.my-health-position-alignment-categories {
+	display: table;
+	margin: 0 auto;
+}
+
+.my-health-position-style-categories {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	height: 130px;
+	width: 130px;
+	border: 1px;
+	border-style: solid;
+	border-color: #979797;
+	border-radius: 8px;
+}
+
+.my-health-legend-categories {
+	display: block;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+#headline-main-my-health {
+	font-size:30px;
+	display: block;
+	margin-left: 20px;
+}
