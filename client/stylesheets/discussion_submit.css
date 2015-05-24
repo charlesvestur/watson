@@ -23,9 +23,23 @@
 	border-radius: 8px;
 }
 
+div .color-categories {
+	border-color: #4A90E2;
+	color: #4A90E2;
+	fill: #979797;
+}
+
+/*.svg-color-categories {
+	fill: #979797;
+}*/
+
 .legend-categories {
 	display: block;
 	margin: auto;
+}
+
+.legend-color-categories {
+	
 }
 
 .symptoms-symptoms-active {

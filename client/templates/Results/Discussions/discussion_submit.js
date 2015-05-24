@@ -1,13 +1,78 @@
 //To insert implied attributes ("author", "submitted", ...)
-//We first create the object 'discussion' with the attributes filled by the user
+//We first create the object 'discussion' with the attributes filled by the use
+
 Template.discussionSubmit.events({
+
+    'click .symptoms-category': function(e) {
+        categoryStatus = 'symptoms',
+        $('.symptoms-category').toggleClass('color-categories')
+        //Trouver le moyen de toggleClass('color-categories') sur un élément SVG
+        if ($('.consultation-category').hasClass('color-categories')) {
+            $('.consultation-category').toggleClass('color-categories')
+        }
+        else if ($('.treatment-category').hasClass('color-categories')) {
+                $('.treatment-category').toggleClass('color-categories')
+        }
+        else if ($('.convalescence-category').hasClass('color-categories')) {
+            $('.convalescence-category').toggleClass('color-categories')
+        }
+        else {}       
+        },
+
+    'click .consultation-category': function(e) {
+        categoryStatus = 'consultation',
+        $('.consultation-category').toggleClass('color-categories')
+        //Trouver le moyen de toggleClass('color-categories') sur un élément SVG
+        if ($('.symptoms-category').hasClass('color-categories')) {
+            $('.symptoms-category').toggleClass('color-categories')
+        }
+        else if ($('.treatment-category').hasClass('color-categories')) {
+                $('.treatment-category').toggleClass('color-categories')
+        }
+        else if ($('.convalescence-category').hasClass('color-categories')) {
+            $('.convalescence-category').toggleClass('color-categories')
+        }
+        else {}
+        },
+
+    'click .treatment-category': function(e) {
+        categoryStatus = 'treatment',
+        $('.treatment-category').toggleClass('color-categories')
+        //Trouver le moyen de toggleClass('color-categories') sur un élément SVG
+        if ($('.symptoms-category').hasClass('color-categories')) {
+            $('.symptoms-category').toggleClass('color-categories')
+        }
+        else if ($('.consultation-category').hasClass('color-categories')) {
+                $('.consultation-category').toggleClass('color-categories')
+        }
+        else if ($('.convalescence-category').hasClass('color-categories')) {
+            $('.convalescence-category').toggleClass('color-categories')
+        }
+        else {}
+        },
+
+    'click .convalescence-category': function(e) {
+        categoryStatus = 'convalescence',
+        $('.convalescence-category').toggleClass('color-categories')
+        //Trouver le moyen de toggleClass('color-categories') sur un élément SVG
+        if ($('.symptoms-category').hasClass('color-categories')) {
+            $('.symptoms-category').toggleClass('color-categories')
+        }
+        else if ($('.consultation-category').hasClass('color-categories')) {
+                $('.consultation-category').toggleClass('color-categories')
+        }
+        else if ($('.treatment-category').hasClass('color-categories')) {
+                $('.treatment-category').toggleClass('color-categories')
+        }
+        else {}
+        },
 
     'submit form': function(e) {
 	    e.preventDefault();
 	    var discussion = {
 	        title: $(e.target).find('[name=title]').val(),
 	        question: $(e.target).find('[name=question]').val(),
-            //category: categoryStatus
+            category: categoryStatus
 	    };
 
 //We apply our discussionInsert function to the object 'discussion'
@@ -19,6 +84,7 @@ Template.discussionSubmit.events({
 		});
 	}
 });
+
 
 /* We can also add the various implied attributes ("author", "submitted", ...) in the database with the following hook:
 
