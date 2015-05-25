@@ -2,14 +2,39 @@
 	font-size: 20px;
 }
 
-.symbol-gender-reverse {
-	margin: 5px;
+.symbol-containers {
+	height:50px;
+	width: 50px;
+	margin: 10px;
+	padding: 2px;
+	border:1px;
+	border-style: solid;
+	border-radius: 5px;
+	border-color: #4A90E2;
 	display: inline-block;
 	vertical-align: middle;
+	text-align: center;
 	}
 
-#human-body {
-	width: 180px;
+div .symbols-gender {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.blue-background {
+	background-color: #4A90E2;
+}
+
+.white-fill {
+	fill: #FFFFFF;
+}
+
+#gender-female {
+	margin-right: 10px;	
+}
+
+#human-body-img {
+	width: 220px;
 	height: auto;
 }
 
@@ -28,8 +53,8 @@
 	font-size:15px;
 	border:1px solid #4A90E2;
 	border-radius: 5px;
-	padding:5px;
-	margin-left: 10px;
+	padding:2px;
+	margin-left: 15px;
 	display: inline-block;
 	vertical-align: middle;
 	text-align: center;

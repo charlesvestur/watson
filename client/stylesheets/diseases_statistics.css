@@ -1,4 +1,4 @@
-.highlighted-stats {
+.big-highlighted-stats {
 	font-size: 40px;
 }
 
@@ -74,7 +74,11 @@
 	display: block;
 	text-align: center;
 	font-size: 20px;
-	color:#58B1DB;
+	line-height: 140%;
+}
+
+.small-highlighted-stats {
+	font-size: 25px;
 }
 
 #separator-disease-statistics {
@@ -91,6 +95,7 @@
 .triangle-border {
   position:relative;
   padding: 15px;
+  padding-bottom: 0px;
   margin:1em 0 1em;
   border:5px solid #58B1DB;
   color:#333;
