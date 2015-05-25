@@ -1,36 +1,55 @@
-//To insert implied attributes ("author", "submitted", ...)
-//We first create the object 'discussion' with the attributes filled by the use
-
 Template.discussionSubmit.events({
 
     'click .symptoms-category': function(e) {
         categoryStatus = 'symptoms',
         $('.symptoms-category').toggleClass('color-categories')
-        //Trouver le moyen de toggleClass('color-categories') sur un élément SVG
+    //length permet de tester l'existence
+        if($('.svg-symptoms-category-not-selected').length) {
+            $('.svg-symptoms-category-not-selected').attr('class','svg-symptoms-category-selected')
+            }
+        else if ($('.svg-symptoms-category-selected').length){
+            $('.svg-symptoms-category-selected').attr('class','svg-symptoms-category-not-selected')
+            }
+        else {};
+
         if ($('.consultation-category').hasClass('color-categories')) {
             $('.consultation-category').toggleClass('color-categories')
+            $('.svg-consultation-category-selected').attr('class','svg-consultation-category-not-selected')
         }
         else if ($('.treatment-category').hasClass('color-categories')) {
                 $('.treatment-category').toggleClass('color-categories')
-        }
+                $('.svg-treatment-category-selected').attr('class','svg-treatment-category-not-selected')
+        }   
         else if ($('.convalescence-category').hasClass('color-categories')) {
             $('.convalescence-category').toggleClass('color-categories')
+            $('.svg-convalescence-category-selected').attr('class','svg-convalescence-category-not-selected')
         }
-        else {}       
+        else {};       
         },
 
     'click .consultation-category': function(e) {
         categoryStatus = 'consultation',
         $('.consultation-category').toggleClass('color-categories')
-        //Trouver le moyen de toggleClass('color-categories') sur un élément SVG
+    //length permet de tester l'existence
+        if($('.svg-consultation-category-not-selected').length) {
+            $('.svg-consultation-category-not-selected').attr('class','svg-consultation-category-selected')
+            }
+        else if ($('.svg-consultation-category-selected').length){
+            $('.svg-consultation-category-selected').attr('class','svg-consultation-category-not-selected')
+            }
+        else {};
+
         if ($('.symptoms-category').hasClass('color-categories')) {
             $('.symptoms-category').toggleClass('color-categories')
+            $('.svg-symptoms-category-selected').attr('class','svg-symptoms-category-not-selected')
         }
         else if ($('.treatment-category').hasClass('color-categories')) {
                 $('.treatment-category').toggleClass('color-categories')
+                $('.svg-treatment-category-selected').attr('class','svg-treatment-category-not-selected')
         }
         else if ($('.convalescence-category').hasClass('color-categories')) {
             $('.convalescence-category').toggleClass('color-categories')
+            $('.svg-convalescence-category-selected').attr('class','svg-convalescence-category-not-selected')
         }
         else {}
         },
@@ -38,15 +57,25 @@ Template.discussionSubmit.events({
     'click .treatment-category': function(e) {
         categoryStatus = 'treatment',
         $('.treatment-category').toggleClass('color-categories')
-        //Trouver le moyen de toggleClass('color-categories') sur un élément SVG
+        if($('.svg-treatment-category-not-selected').length) {
+            $('.svg-treatment-category-not-selected').attr('class','svg-treatment-category-selected')
+            }
+        else if ($('.svg-treatment-category-selected').length){
+            $('.svg-treatment-category-selected').attr('class','svg-treatment-category-not-selected')
+            }
+        else {};
+
         if ($('.symptoms-category').hasClass('color-categories')) {
             $('.symptoms-category').toggleClass('color-categories')
+            $('.svg-symptoms-category-selected').attr('class','svg-symptoms-category-not-selected')
         }
         else if ($('.consultation-category').hasClass('color-categories')) {
                 $('.consultation-category').toggleClass('color-categories')
+                $('.svg-consultation-category-selected').attr('class','svg-consultation-category-not-selected')
         }
         else if ($('.convalescence-category').hasClass('color-categories')) {
             $('.convalescence-category').toggleClass('color-categories')
+            $('.svg-convalescence-category-selected').attr('class','svg-convalescence-category-not-selected')
         }
         else {}
         },
@@ -54,19 +83,31 @@ Template.discussionSubmit.events({
     'click .convalescence-category': function(e) {
         categoryStatus = 'convalescence',
         $('.convalescence-category').toggleClass('color-categories')
-        //Trouver le moyen de toggleClass('color-categories') sur un élément SVG
+        if($('.svg-convalescence-category-not-selected').length) {
+            $('.svg-convalescence-category-not-selected').attr('class','svg-convalescence-category-selected')
+            }
+        else if ($('.svg-convalescence-category-selected').length){
+            $('.svg-convalescence-category-selected').attr('class','svg-convalescence-category-not-selected')
+            }
+        else {};
+        
         if ($('.symptoms-category').hasClass('color-categories')) {
             $('.symptoms-category').toggleClass('color-categories')
+            $('.svg-symptoms-category-selected').attr('class','svg-symptoms-category-not-selected')
         }
         else if ($('.consultation-category').hasClass('color-categories')) {
                 $('.consultation-category').toggleClass('color-categories')
+                $('.svg-consultation-category-selected').attr('class','svg-consultation-category-not-selected')
         }
         else if ($('.treatment-category').hasClass('color-categories')) {
                 $('.treatment-category').toggleClass('color-categories')
+                $('.svg-treatment-category-selected').attr('class','svg-treatment-category-not-selected')
         }
         else {}
         },
 
+    //To insert implied attributes ("author", "submitted", ...)
+    //-> First, we create the object 'discussion' when the users submits the form with the attributes he filled in
     'submit form': function(e) {
 	    e.preventDefault();
 	    var discussion = {
@@ -74,6 +115,7 @@ Template.discussionSubmit.events({
 	        question: $(e.target).find('[name=question]').val(),
             category: categoryStatus
 	    };
+
 
 //We apply our discussionInsert function to the object 'discussion'
 		Meteor.call('discussionInsert', discussion, function(error, result) {
@@ -102,26 +144,6 @@ AutoForm.hooks({
 
 
 
-
-/*UI.registerHelper("categorySelectedDesign", function(){
-    var className="";
-    switch(categoryStatus){
-        case "symptoms":
-        className="symptoms-active"
-        break;
-        case "consultation":
-        className="consultation-active"
-        break;
-        case "traitement":
-        className="traitement-active"
-        break;
-        case "convalescence":
-        className="convalescence-active"
-        break;
-    }
-    return className;
-});*/
-
 /*Template.mainResults.helpers({
     discussionsList : function () {
          return Session.equals("discussionsList", "discussionsList")  
@@ -130,24 +152,3 @@ AutoForm.hooks({
          return Session.equals("discussionSubmit", "discussionSubmit")  
     }
  });*/
-
-
-
-UI.registerHelper("currentRouteName",function(){
-    var className="";
-   switch(Router.current().route.getName()) {
-       case "mainSymptomChecker":
-           className="stetoscope-active"
-           break;
-       case "mainResults":
-           className="results-active"
-           break;
-       case "mainFeedback":
-            className="feedback-active"
-            break;
-        case "discussionSubmit":
-            className="results-active"
-    }
-    return className;
-});
-

@@ -29,9 +29,21 @@ div .color-categories {
 	fill: #979797;
 }
 
-/*.svg-color-categories {
+div .svg-symptoms-category-not-selected {
 	fill: #979797;
-}*/
+}
+
+div .svg-consultation-category-not-selected {
+	fill: #979797;
+}
+
+div .svg-treatment-category-not-selected {
+	fill: #979797;
+}
+
+div .svg-convalescence-category-not-selected {
+	fill: #979797;
+}
 
 .legend-categories {
 	display: block;
