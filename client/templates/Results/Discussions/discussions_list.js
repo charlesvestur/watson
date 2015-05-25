@@ -23,12 +23,3 @@ Template.discussionsItem.events({
     else {};
     }
 });	
-
-/*$(document).ready(function(){
-    $(".header").click(function(){
-        $(this).children(".children").toggle();
-    });
-   $(".header a").click(function(e) {
-        e.stopPropagation();
-   });
-});*/

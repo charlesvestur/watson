@@ -5,10 +5,6 @@ Template.discussionsItem.onRendered(
     }    
 );
 
-Template.discussionsItem.onCreated(function(){
-    $('.star').off('click')
-});
-
 Template.discussionsItem.helpers({
 	dateOfCreation: function(){
 		return moment(this.submitted).fromNow();

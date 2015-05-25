@@ -3,11 +3,11 @@
 	{{> yield region='subnavbar'}}
 	{{> diseasesStatistics}}
 	<div class="col-md-2">
-		<div class="box-headline">#hashtags</div>
+		<div class="box-headline box-headline-main-results">#hashtags</div>
 	</div>
 
 	<div class="col-md-7">
-		<div class="box-headline">Discussions</div>
+		<div class="box-headline box-headline-main-results">Discussions</div>
 		<p id='discutionSubmit'><a href="{{pathFor 'discussionSubmit'}}">Posez une question!</a></p>
 		<div class="discussionsBody">
 			{{> yield region='discussionsBody'}}
@@ -15,7 +15,7 @@
 	</div>
 
 	<div class="col-md-3">
-		<div class="box-headline">Articles cités</div>
+		<div class="box-headline box-headline-main-results">Articles cités</div>
 	</div>
 
 </template>

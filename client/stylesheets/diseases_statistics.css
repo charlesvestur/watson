@@ -6,3 +6,141 @@
 	margin-left: 10px;	
 	font-size: 25px;
 }
+
+.container-disease-chart {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0px;
+}
+
+.not-selected-disease-name {
+	display: inline-block;
+	font-size: 20px;
+	color:#979797;
+}
+
+.selected-disease-name {
+	display: inline-block;
+	font-size: 20px;
+	color:#58B1DB;
+}
+
+.not-selected-disease-chart {
+	width: 300px;
+	height: 40px;
+	border: 2px;
+	border-style: solid;
+	border-color: #757575;
+	background-color: #E0E0E0;
+	margin-bottom: 15px;
+}
+
+.selected-disease-chart {
+	width: 300px;
+	height: 40px;
+	border: 2px;
+	border-style: solid;
+	border-color: #00838f;
+	background-color: #58B1DB;
+	margin-bottom: 15px;
+}
+
+.not-selected-disease-percentage {
+	display: block;
+	height: 30px;
+	margin-left: 5px;
+	font-size: 30px;
+	color:#979797;
+}
+
+.selected-disease-percentage {
+	display: block;
+	height: 30px;
+	margin-left: 5px;
+	font-size: 30px;
+	color:#FFFFFF;
+}
+
+.container-disease-statistics {
+	vertical-align: top;
+	display: inline-block;
+	text-align: center;
+	width: 230px;
+	margin-left: 12px;
+	margin-right: 12px;
+}
+
+.disease-statistics-legend {
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	color:#58B1DB;
+}
+
+#separator-disease-statistics {
+	display: inline-block;
+	width: 0px;
+	height: 150px;
+	border-left: 1px;
+	border-left: solid;
+	border-color: #979797; 
+	margin-left: 20px;
+	margin-right: 50px;
+}
+
+.triangle-border {
+  position:relative;
+  padding: 15px;
+  margin:1em 0 1em;
+  border:5px solid #58B1DB;
+  color:#333;
+  background:#fff;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+}
+
+/* creates the larger (i.e visible) triangle */
+.triangle-border:before {
+  content:"";
+  position:absolute;
+  border-width:20px 20px 0;
+  border-style:solid;
+  border-color:#58B1DB transparent;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+}
+
+/* creates the smaller (i.e white)  triangle */
+.triangle-border:after {
+  content:"";
+  position:absolute;
+  border-width:13px 13px 0;
+  border-style:solid;
+  border-color:#fff transparent;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+}
+
+/* Places the larger (i.e visible) triangle on top */
+.triangle-border.top:before {
+  top:-20px; /* value = - border-top-width - border-bottom-width */
+  bottom:auto;
+  left:auto;
+  right:320px; /* controls horizontal position */
+  border-width:0 20px 20px;
+}
+
+/* Places the smaller (i.e white) triangle on top */
+.triangle-border.top:after {
+  top:-13px; /* value = - border-top-width - border-bottom-width */
+  bottom:auto;
+  left:auto;
+  right:327px; /* value = (:before right) + (:before border-right) - (:after border-right) */
+  border-width:0 13px 13px;
+}
+
+
+
