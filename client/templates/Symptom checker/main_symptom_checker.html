@@ -51,18 +51,34 @@
 		</div>
 		<div class="color-blue-regular" id="symptomes-diffus">Symptômes<br/>diffus</div>
 	</div>
-		<img id="human-body-img" src="images/body_man_front.jpg">
+		<img id="human-body-img" src="images/body_man_front.jpg" usemap="#symptoms-areas-front">
+		<p>
+			<map id="imgmap2015525222953" name="symptoms-areas-front">
+				<area id="head" shape="circle" alt="" title="head" coords="124,48,34" href="" target="" />
+				<area shape="rect" alt="" title="chest" coords="78,101,169,155" href="" target="" />
+				<area shape="rect" alt="" title="arm-right" coords="46,102,70,240" href="" target="" />
+				<area shape="rect" alt="" title="arm-left" coords="175,101,204,236" href="" target="" />
+				<area shape="rect" alt="" title="wrist-right" coords="26,244,59,260" href="" target="" />
+				<area shape="rect" alt="" title="wrist-left" coords="190,240,223,259" href="" target="" />
+				<area shape="rect" alt="" title="hand-right" coords="15,263,60,306" href="" target="" />
+				<area shape="rect" alt="" title="hand-left" coords="189,262,234,308" href="" target="" />
+				<area shape="rect" alt="" title="tummy" coords="87,160,161,244" href="" target="" />
+				<area shape="rect" alt="" title="urogenital" coords="99,248,146,280" href="" target="" />
+				<area shape="rect" alt="" title="legs" coords="83,283,161,489" href="" target="" />
+				<area shape="rect" alt="" title="feet" coords="84,493,161,517" href="" target="" />
+				<!-- Created by Online Image Map Editor (http://www.maschek.hu/imagemap/index) -->
+			</map>
+		</p>
 	</div>
 </div>
 
 <div class="col-xs-4 col-md-4">
 <span class="color-blue-regular headline-symptom-checker">Sélectionnez vos symptômes</span>
-	<div class="box-headline" id="area-of-symptom-selected">Tête</div>
+	<div class="box-headline" id="area-of-symptoms-selected">Doigt</div>
 	{{> symptomsDisplayedItem}}
 </div>
 <div class="col-xs-4 col-md-4">
 <span class="color-blue-regular headline-symptom-checker">Récapitulatif de vos symptômes</span>
-
 </div>
 
 </template>

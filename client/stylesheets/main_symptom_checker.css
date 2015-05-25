@@ -34,7 +34,7 @@ div .symbols-gender {
 }
 
 #human-body-img {
-	width: 220px;
+	width: 250px;
 	height: auto;
 }
 
@@ -60,7 +60,7 @@ div .symbols-gender {
 	text-align: center;
 }
 
-#area-of-symptom-selected {
+#area-of-symptoms-selected {
 	margin-top: 10px;
 	margin-right: 20px;
 }

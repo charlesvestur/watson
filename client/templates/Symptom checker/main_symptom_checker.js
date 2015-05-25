@@ -29,5 +29,10 @@ Template.mainSymptomChecker.events({
 			$('#human-body-img').attr('src','images/body_woman_front.jpg')
 		};
 		$('#reverse-sign').toggleClass('body-front')
-	}
+	},
+
+	'mouseenter #head': function(e){
+		$('#area-of-symptoms-selected').innerHTML = 'Tête'
+		//innerHTML not working...
+		}
 });
