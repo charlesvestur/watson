@@ -1,14 +1,19 @@
 Template.discussionsItem.onRendered(
-    function(){$('.collapsible').collapsible({
+    function(){
+    $('.collapsible').collapsible({
     accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
     });
-    }    
+    }
 );
 
-Template.discussionsItem.helpers({
-	dateOfCreation: function(){
+Template.discussionsItem.events({
+    'click #see-all-answers': function(e){
+        Session.set('currentDiscussionId', this._id);
+    }
+});
+
+Template.registerHelper('dateOfCreation', function(){
 		return moment(this.submitted).fromNow();
-	}
 });
 
 moment.locale('fr', {

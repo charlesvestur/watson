@@ -1,4 +1,23 @@
 <template name="discussionPage">
-
-
+<div class="collapsible" id="container-question-information">
+			<i class="mdi-image-filter-drama" id="icon-question"></i>
+	<!--Classes used are in discussions_item.css-->
+			<span class="question-title-design color-blue-amaya">{{title}}</span>
+			<div class="color-grey-passive right-align information-question-design">
+			par  
+			{{author}} -
+			18
+			réponses - 
+			317 
+			votes -
+			{{dateOfCreation}}
+			</div>
+			<span class="color-blue-regular" id="question-headline-dp">Question détaillée</span>
+			<p id="question-text">{{question}}</p>
+</div>
+<div>
+	<div class="color-blue-regular" id="all-answers-headline">Toutes les réponses</div>
+	<a class="color-blue-regular" id="suggest-answer" href="{{pathFor 'answerSubmit'}}">Proposer une réponse!</a>
+</div>
+	{{> answersList}}
 </template>

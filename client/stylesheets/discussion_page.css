@@ -1,0 +1,43 @@
+#container-question-information {
+  line-height: 3rem;
+  padding: 0 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+#question-headline-dp {
+	font-size: 15px;
+	margin-top: 5px;
+}
+
+#question-text {
+	padding: 5px;
+	padding-left: 10px;
+	line-height: 150%;
+}
+
+#all-answers-headline {
+	display: inline-block;
+	font-size: 15px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	margin-left: 1rem;
+	vertical-align: middle;
+}
+
+#icon-question {
+width: 2rem;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  display: block;
+  float: left;
+  text-align: center;
+  margin-right: 1rem
+}
+
+#suggest-answer {
+	display: inline-block;
+	float: right;
+	font-size: 15px;
+	vertical-align: middle;
+}

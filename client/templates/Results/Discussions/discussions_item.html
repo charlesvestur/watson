@@ -3,11 +3,10 @@
 		<li>
 	    <div class="collapsible-header" id="size-collapsible-header"><i class="mdi-image-filter-drama"></i>
 				<div id="question-block">
-					<span class="color-blue-amaya" id="question-design">{{title}}</span>
+					<span class="color-blue-amaya question-title-design">{{title}}</span>
 					<span class="star glyphicon glyphicon-star-empty color-grey-passive" id="{{discussionsItemTemplateId}}"></span>
 				</div>
-				<div class="color-grey-passive right-align" id="information-question-design">
-				
+				<div class="color-grey-passive right-align information-question-design">
 				par  
 				{{author}} -
 				18
@@ -18,10 +17,12 @@
 				</div>
 		</div>
 		<div class="collapsible-body">
-			<span class="color-blue-regular" id="question-headline">Question détaillée</span>
+			<span class="color-blue-regular question-and-best-answer-headline">Question détaillée</span>
 			<p id="question-paragraph">{{question}}</p>
-			<span class="color-blue-regular" id="answer-headline">Meilleure réponse</span>
-			<p id="answer-paragraph">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commod…</p>
+			<span class="color-blue-regular question-and-best-answer-headline" id="best-answer-headline">Meilleure réponse</span>
+			<a class="color-blue-regular " id="see-all-answers" href="{{pathFor 'discussionPage'}}"> (Voir toutes les réponses)</a>
+
+			<p id="best-answer-paragraph">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commod…</p>
 		</div>
 	    </li>
    	</ul>

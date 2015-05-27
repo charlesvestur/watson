@@ -1,0 +1,9 @@
+<template name="answerSubmit">
+	{{#autoForm collection="Answers" id="answerSubmit" type="insert"}}
+ 	<fieldset>
+	  <legend>Proposez votre réponse !</legend>
+      {{> afQuickField name='answer' rows=10}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Poster la réponse</button>	
+  {{/autoForm}}
+</template>

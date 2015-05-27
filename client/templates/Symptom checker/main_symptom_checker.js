@@ -26,13 +26,13 @@ Template.mainSymptomChecker.events({
 			$('#human-body-img').attr('src','images/body_man_front.jpg')
 		}
 		else {
-			$('#human-body-img').attr('src','images/body_woman_front.jpg')
+			$('#human-body-img').attr('src','images/body_woman_front.jpg');
 		};
 		$('#reverse-sign').toggleClass('body-front')
 	},
 
 	'mouseenter #head': function(e){
-		$('#area-of-symptoms-selected').innerHTML = 'Tête'
+		$('#area-of-symptoms-selected').val('Tête');
 		//innerHTML not working...
 		}
 });

@@ -1,10 +1,10 @@
 <template name="discussionSubmit">
-<script src="lunar.js"></script>
   {{#autoForm collection="Discussions" id="discussionSubmit" type="insert"}}
  	<fieldset>
 	  <legend>Posez votre question !</legend>
 	  <p class="color-blue-regular">Choissisez la catégorie de votre question :</p>
-
+	  <!--Use span below to mask all svg files-->
+	<span>
 	  	<div class="position-alignment-categories">
 		  	<div class="position-style-categories symptoms-category">
 				<svg width="60px" height="71px" viewBox="0 0 60 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
@@ -99,10 +99,9 @@
 			</div>
 			<span class="legend-categories convalescence-category color-grey-passive">Convalescence</span>
 		</div>
-
+	</span>
       {{> afQuickField name='title'}}
       {{> afQuickField name='question' rows=6}}
-
     </fieldset>
     <button type="submit" class="btn btn-primary">Poser la question</button>	
   {{/autoForm}}

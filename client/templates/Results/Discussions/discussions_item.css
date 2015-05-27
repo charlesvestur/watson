@@ -1,40 +1,49 @@
-#size-collapsible-header {
-	height: 90px;
+.question-title-design {
+	font-size: 20px;
 }
 
-#question-design {
-	font-size: 20px;
+.information-question-design {
+	font-size: 15px;
+	text-align: right;
+}
+
+.question-and-best-answer-headline {
+	font-size: 15px;
+	margin-top: 5px;
+	margin-left: 15px;
+}
+
+#size-collapsible-header {
+	height: 90px;
 }
 
 #question-block {
 	margin-top: 5px;
 }
 
-#information-question-design {
-	font-size: 15px;
-	text-align: right;
-}
-
 #star {
 	float: right;
 }
 
-#question-headline {
-	font-size: 15px;
-	margin-top: 5px;
-	margin-left: 15px;
-}
-
-#answer-headline {
-	font-size: 15px;
-	margin-top: 5px;
-	margin-left: 15px;
-}
-
 #question-paragraph {
-	padding-top: 2px;
+	padding: 5px;
+	padding-left: 2rem;
+	line-height: 150%;
 }
 
-#answer-paragraph {
-	padding-top: 2px;
+#best-answer-headline {
+	display: inline-block;
+	margin-top: 5px;
+
+}
+
+#see-all-answers {
+	display: inline;
+	font-size: 12px;
+}
+
+#best-answer-paragraph {
+	padding: 5px;
+	padding-left: 2rem;
+	line-height: 150%;
 }

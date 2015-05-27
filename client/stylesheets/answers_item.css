@@ -1,0 +1,28 @@
+#container-answer {
+	margin-top: 10px;
+	padding-bottom: 5px;
+}
+
+#author-design {
+	font-size: 15px;
+}
+
+#author-and-diagnosis {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#answers-options{
+	display: inline-block;
+	float: right;
+	vertical-align: middle;
+}
+
+#answer-text {
+	margin-top: 5px;
+	border-left: 1px solid #979797;
+	padding: 5px;
+	padding-left: 10px;
+	line-height: 150%;
+}
+
