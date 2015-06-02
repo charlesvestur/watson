@@ -1,8 +1,6 @@
-#container-question-information {
+#question-detailed {
   line-height: 3rem;
   padding: 0 1rem;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
 }
 
 #question-headline-dp {

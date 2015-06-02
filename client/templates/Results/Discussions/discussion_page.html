@@ -1,8 +1,10 @@
 <template name="discussionPage">
 <div class="collapsible" id="container-question-information">
-	{{> questionsItem}}
-			<div class="color-blue-regular" id="question-headline-dp">Question détaillée</div>
-			<p id="question-text">{{question}}</p>
+		{{> questionsItem}}
+	<div id="question-detailed">
+		<div class="color-blue-regular" id="question-headline-dp">Question détaillée</div>
+		<p id="question-text">{{question}}</p>
+	</div>
 </div>	
 	{{> yield region='discussionPageBody'}}
 	{{> yield region='discussionPageSubBody'}}

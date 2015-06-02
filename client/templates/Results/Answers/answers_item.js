@@ -18,23 +18,13 @@ Template.answersItem.events({
     } 
   },
 
-  'click #link-comment': function(e) {
-  	if ($('#comment').hasClass('display-none'))
-  		{
-  		$('#comment').removeClass('display-none');
-		}  	
-  	else {
-  		$('#comment').addClass('display-none');
-  		}
-  	},
-
   'click #link-see-comments': function(e) {
-  	if ($('#see-comments').hasClass('display-none'))
+  	if ($('#comments-container').hasClass('display-none'))
   		{
-  		$('#see-comments').removeClass('display-none');
+  		$('#comments-container').removeClass('display-none');
 		}  	
   	else {
-  		$('#see-comments').addClass('display-none');
+  		$('#comments-container').addClass('display-none');
   		}
   	}
 
@@ -57,6 +47,6 @@ Template.answersItem.helpers({
 
 Template.answersItem.helpers({
   comments: function() {
-    return Comments.find({answerId: this._id});
+    return Comments.find({answerId: this._id}, {sort: {submitted: -1}});
   }
 });
