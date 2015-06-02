@@ -1,7 +1,7 @@
 Template.answersList.helpers({
   answers: function() {        
  	return Answers.find({
- 		discussionId: Session.get('currentDiscussionId')
- 	}, {sort: {submitted: -1}});
+ 		discussionId: Template.currentData()._id}, 
+ 		{sort: {submitted: -1}});
   }
 });

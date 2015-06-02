@@ -1,0 +1,10 @@
+<template name="discussionEdit">
+	{{#autoForm collection="Discussions" id="discussionEdit" type="update" doc=this}}
+	<fieldset>
+		<legend>Modifiez votre question</legend>
+	      {{> afQuickField name='title' label="Nouvelle question"}}
+	      {{> afQuickField name='question' label="Nouvelle question détaillée" rows=6}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Editer la question</button>
+    {{/autoForm}}
+</template>	

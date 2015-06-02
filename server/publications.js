@@ -5,3 +5,7 @@ Meteor.publish('discussions', function() {
 Meteor.publish('answers', function() {
   return Answers.find();
 });
+
+Meteor.publish('comments', function() {
+  return Comments.find();
+});

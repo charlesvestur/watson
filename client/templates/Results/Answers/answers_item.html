@@ -1,16 +1,36 @@
 <template name="answersItem">
-<div>
-	<div id="author-and-diagnosis">
-		<span class="color-blue-regular" id="author-design">{{author}} </span>
-		<span> - A eu la grippe</span>
+<div id="container-whole-answer">
+	<div id="answer-header">
+		<div id="container-author-and-diagnosis">
+			<span class="color-blue-regular" id="author-design">{{author}} </span>
+			<span class="color-grey-passive"> - A eu la grippe</span>
+		</div>
+		<div class="color-grey-passive information-question-design" id="answers-options">
+			<a class="upvote btn override {{upvotedClass}}" id="{{currentItemTemplateId}}" href="#">⬆</a>
+				<span id="number-of-votes">{{pluralize votes "vote"}}</span>
+		</div>
 	</div>
-	<div class="color-grey-passive information-question-design" id="answers-options">
-		<span>Commenter - </span>
-		<span>Voter - </span>
-		<span id="number-of-votes">59 votes </span>
+	<div id="answer-body">
+		<p id="answer-text">
+			{{answer}}
+		</p>
 	</div>
-	<p id="answer-text">
-		{{answer}}
-	</p>
+	<div id="answer-footer">
+	<a id="link-comment">Commenter - </a>
+	<a id="link-see-comments">Voir les commentaires </a>
+		<span class="color-grey-passive" id="answer-submitted">
+		{{dateOfCreation}}
+		</span>
+	</div>
+	<div class="" id="comments-container">
+		<div class="" id="see-comments">
+			{{#each comments}}
+				{{> commentsItem}}
+			{{/each}}
+		</div>	
+		<div id="comment">
+			{{> commentSubmit}}
+		</div>
+	</div>
 </div>
 </template>

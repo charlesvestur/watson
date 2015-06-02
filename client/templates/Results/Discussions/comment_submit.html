@@ -1,0 +1,8 @@
+<template name="commentSubmit">
+	{{#autoForm collection="Comments" id="commentSubmit" type="insert"}}
+ 	<fieldset>
+      {{> afQuickField name='commentbody' label='Votre commentaire' rows=10}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Poster le commentaire</button>	
+  {{/autoForm}}
+</template>

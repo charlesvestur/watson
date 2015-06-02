@@ -1,4 +1,8 @@
 <template name="answersList">	
+<div>
+	<div class="color-blue-regular" id="all-answers-headline">Toutes les réponses</div>
+	<a class="color-blue-regular" id="suggest-answer" href="{{pathFor 'answerSubmit'}}">Proposer une réponse!</a>
+</div>
 {{#each answers}}
 	{{> answersItem}}
 {{/each}}

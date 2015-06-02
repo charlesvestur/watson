@@ -3,7 +3,7 @@ Template.discussionSubmit.events({
     'click .symptoms-category': function(e) {
         categoryStatus = 'symptoms',
         $('.symptoms-category').toggleClass('color-categories');
-    //length permet de tester l'existence
+        //length permet de tester l'existence
         if($('.svg-symptoms-category-not-selected').length) {
             $('.svg-symptoms-category-not-selected').attr('class','svg-symptoms-category-selected');
             }
@@ -30,7 +30,7 @@ Template.discussionSubmit.events({
     'click .consultation-category': function(e) {
         categoryStatus = 'consultation',
         $('.consultation-category').toggleClass('color-categories');
-    //length permet de tester l'existence
+         //length permet de tester l'existence
         if($('.svg-consultation-category-not-selected').length) {
             $('.svg-consultation-category-not-selected').attr('class','svg-consultation-category-selected');
             }
@@ -118,31 +118,14 @@ Template.discussionSubmit.events({
 
 
     //Then, we apply our discussionInsert function to the object 'discussion'
-            Meteor.call('discussionInsert', discussion, function(error, result) {
-    	    // affiche l'erreur à l'utilisateur et s'interrompt
-    	    if (error)
-    	        return alert(error.reason);
-    	    Router.go('mainResults', {_id: result._id});
-		});
+        Meteor.call('discussionInsert', discussion, function(error, result) {
+	    // affiche l'erreur à l'utilisateur et s'interrompt
+	    if (error)
+	        return alert(error.reason);
+	    Router.go('mainResults');
+	    });
 	}
 });
-
-
-/* We can also add the various implied attributes ("author", "submitted", ...) in the database with the following hook:
-
-AutoForm.hooks({        
-        discussionSubmit: {
-            before: {
-                insert: function(doc) {
-                    doc.submitted = new Date;
-                    doc.upvote = 0;
-                    this.result(doc);
-                }
-            }
-        }            
-    });*/
-
-
 
 /*Template.mainResults.helpers({
     discussionsList : function () {

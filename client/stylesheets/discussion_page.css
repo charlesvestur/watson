@@ -16,15 +16,6 @@
 	line-height: 150%;
 }
 
-#all-answers-headline {
-	display: inline-block;
-	font-size: 15px;
-	margin-top: 5px;
-	margin-bottom: 15px;
-	margin-left: 1rem;
-	vertical-align: middle;
-}
-
 #icon-question {
 width: 2rem;
   font-size: 1.6rem;
@@ -35,9 +26,3 @@ width: 2rem;
   margin-right: 1rem
 }
 
-#suggest-answer {
-	display: inline-block;
-	float: right;
-	font-size: 15px;
-	vertical-align: middle;
-}

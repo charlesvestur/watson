@@ -1,0 +1,20 @@
+<template name="questionsItem">
+	<div class="collapsible-header" id="size-collapsible-header"><i class="mdi-image-filter-drama"></i>
+		<div id="question-block">
+			<span class="color-blue-amaya question-title-design">{{title}}</span>
+			<span class="star glyphicon glyphicon-star-empty {{starstyle}} color-grey-passive" id="{{currentItemTemplateId}}"></span>
+		</div>
+		<div class="options-question-design" style="display: {{displayOrNot}}">
+		<a id="edit-discussion" href="{{pathFor 'discussionEdit'}}">Editer </a>
+		-
+		<a id="delete-discussion"> Supprimer</a>
+		</div>
+		<div class="color-grey-passive information-question-design">
+		par  
+		{{author}} - 
+		{{pluralize numberOfAnswers "réponse"}} - 
+		{{pluralize numberOfVotes "vote"}} - 
+		{{dateOfCreation}}
+		</div>
+	</div>
+</template>
