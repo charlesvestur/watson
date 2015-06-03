@@ -27,3 +27,21 @@
 #customized-signin-button {
 	background-color: #58B1DB;
 }
+
+ul.notification.dropdown-menu {
+	line-height: 200%;
+	color: #333;
+	text-align: center;
+	padding: 5px;
+}
+
+html nav ul li {
+	float: none;
+}
+
+.badge.badge-inverse {
+	min-width: 0rem;
+	color: #FFFFFF;
+	background-color: #58B1DB;
+	position: static;
+}

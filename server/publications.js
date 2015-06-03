@@ -17,3 +17,6 @@ Meteor.publish('comments', function(discussionId) {
   return Comments.find({discussionId: discussionId});
 });
 
+Meteor.publish('notifications', function() {
+  return Notifications.find({userId: this.userId, read: false});
+});

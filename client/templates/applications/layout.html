@@ -20,6 +20,9 @@
             <li><a class="color-grey-passive" href="{{pathFor 'home'}}">Accueil</a></li>
             <li><a class="color-grey-passive" href="{{pathFor 'mainMyHealth'}}">A propos</a></li>
             <li><a class="color-grey-passive" href="#">FAQ</a></li>
+            {{#if currentUser}}
+              <li class="dropdown"> {{> notificationsList}}</li>
+            {{/if}}
             <li><button type="button" class="btn btn-default navbar-btn" id="customized-signin-button">{{> loginButtons align="right"}}</button></li>
           </ul>
         </div><!-- /.navbar-collapse -->
