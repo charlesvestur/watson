@@ -4,7 +4,7 @@ UI.registerHelper("currentRouteName",function(){
 	   case "mainSymptomChecker":
 	       className="stetoscope-active";
 	       break;
-	   case "discussionsList":
+	   case ("mainResults" || "newDiscussions" || "bestDiscussions"):
 	       className="results-active";
 	       break;
 	   case "mainFeedback":

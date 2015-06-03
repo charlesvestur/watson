@@ -5,13 +5,13 @@ Template.registerHelper('numberOfAnswers', function() {
 );
 
 Template.questionsItem.helpers({
-    numberOfVotes: function() {        
+/*    numberOfVotes: function() {        
         var sumvotes = 0;
         Answers.find({discussionId: this._id}).forEach(function(answer){
             sumvotes = sumvotes + answer.votesCount;
         });
         return sumvotes;
-    },
+    },*/
 
     starstyle: function() {
         if (Discussions.findOne(this._id).followedby.indexOf(Meteor.userId()) > -1){

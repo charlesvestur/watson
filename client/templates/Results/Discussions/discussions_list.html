@@ -1,5 +1,12 @@
 <template name="discussionsList">
   <div class="discussions">
+    <div>
+      <a href="{{pathFor 'newDiscussions'}}">New</a>
+    </div>
+    <div>
+      <a href="{{pathFor 'bestDiscussions'}}">Best</a>
+    </div>
+
     {{#each discussions}}
       {{> discussionsItem}}
     {{/each}}
