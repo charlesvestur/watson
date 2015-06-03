@@ -1,5 +1,14 @@
-Meteor.publish('discussions', function() {
-  return Discussions.find();
+Meteor.publish('discussions', function(options) {
+  check(options, {
+    sort: Object,
+    limit: Number
+  });
+  return Discussions.find({}, options);
+});
+
+Meteor.publish('singleDiscussion', function(id) {
+  check(id, String);
+  return Discussions.find(id);
 });
 
 Meteor.publish('answers', function(discussionId) {
