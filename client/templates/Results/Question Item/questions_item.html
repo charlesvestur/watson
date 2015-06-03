@@ -2,7 +2,7 @@
 	<div class="collapsible-header" id="size-collapsible-header"><i class="mdi-image-filter-drama"></i>
 		<div id="question-block">
 			<span class="color-blue-amaya question-title-design">{{title}}</span>
-			<span class="star glyphicon glyphicon-star-empty {{starstyle}} color-grey-passive" id="{{currentItemTemplateId}}"></span>
+			<span class="star glyphicon glyphicon-star-empty {{starstyle}} color-grey-passive" id="{{currentItemDataContextId}}"></span>
 		</div>
 		<div class="options-question-design" style="display: {{displayIfOwnsItem}}">
 		<a id="edit-discussion" href="{{pathFor 'discussionEdit'}}">Editer </a>
@@ -12,7 +12,7 @@
 		<div class="color-grey-passive information-question-design">
 		par  
 		{{author}} - 
-		{{pluralize numberOfAnswers "réponse"}} - 
+		{{pluralize answersCount "réponse"}} - 
 		{{pluralize numberOfVotes "vote"}} - 
 		{{dateOfCreation}}
 		</div>

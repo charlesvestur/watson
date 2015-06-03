@@ -1,28 +1,14 @@
-Template.registerHelper('currentItemTemplateId', function() {
-    return this._id;
-    }    
-);
-
 Template.registerHelper('numberOfAnswers', function() {        
     return Answers.find({
         discussionId: this._id}).count();
   }
 );
 
-Template.registerHelper('displayIfOwnsItem', function() {
-    if (this.userId == Meteor.userId()){
-        return 'initial';
-    }
-    else {
-        return 'none';
-    }
-});
-
 Template.questionsItem.helpers({
     numberOfVotes: function() {        
         var sumvotes = 0;
         Answers.find({discussionId: this._id}).forEach(function(answer){
-            sumvotes = sumvotes + answer.votes;
+            sumvotes = sumvotes + answer.votesCount;
         });
         return sumvotes;
     },
@@ -34,7 +20,11 @@ Template.questionsItem.helpers({
         else {
             return '';
         }
-    }
+    },
+    //So that number of answers is correct even when an answer is deleted from Mongol
+    /*answersCountHelper: function() {
+        return Answers.find({discussionId: this._id}).count();
+    }*/
 });
 
 Template.questionsItem.events({

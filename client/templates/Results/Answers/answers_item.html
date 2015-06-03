@@ -6,30 +6,37 @@
 			<span class="color-grey-passive"> - A eu la grippe</span>
 		</div>
 		<div class="color-grey-passive information-question-design" id="answers-options">
-			<a class="upvote btn override {{upvotedClass}}" id="{{currentItemTemplateId}}" href="#">⬆</a>
-				<span id="number-of-votes">{{pluralize votes "vote"}}</span>
+			<a class="upvote btn override {{upvotedClass}}" id="{{currentItemDataContextId}}1" href="#">⬆</a>
+				<span id="number-of-votes">{{pluralize votesCount "vote"}}</span>
 		</div>
 	</div>
 	<div id="answer-body">
 		<p id="answer-text">
-			{{answer}}
+			{{answertext}}
 		</p>
 	</div>
 	<div id="answer-footer">
-	<a id="link-see-comments">Commenter - Voir les commentaires </a>
+	<a class="link-see-comments">
+	{{#if currentUser}}
+	Commenter - 
+	{{/if}}
+	{{pluralize commentsCount "commentaire"}} </a>
+	<a id="delete-answer" style="display: {{displayIfOwnsItem}}">- Supprimer</a>
 		<span class="color-grey-passive" id="answer-submitted">
 		{{dateOfCreation}}
 		</span>
 	</div>
-	<div class="display-none" id="comments-container">
+	<div class="display-none" id="{{currentItemDataContextId}}2">
 		<div id="see-comments">
 			{{#each comments}}
 				{{> commentsItem}}
 			{{/each}}
 		</div>	
+		{{#if currentUser}}
 		<div id="comment">
 			{{> commentSubmit}}
 		</div>
+		{{/if}}
 	</div>
 </div>
 </template>

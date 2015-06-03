@@ -1,40 +1,38 @@
 Template.answersItem.events({
   'click .upvote': function(e) {
   	var upvoteId = this._id;
-    if ($('#' + upvoteId).hasClass('disabled-customized')){
-    	$('#' + upvoteId).removeClass('disabled-customized');
-    	$('#' + upvoteId).addClass('btn-primary upvotable');
-    	Answers.update(
-    		{_id: this._id}, 
-    		{
-    			$pull: {upvoters: Meteor.userId()},
-    			$inc: {votes: -1}
-    		},
-    		{}
-    	);
+    if ($('#' + upvoteId + '1').hasClass('disabled-customized')){
+    	$('#' + upvoteId + '1').removeClass('disabled-customized');
+    	$('#' + upvoteId + '1').addClass('btn-primary upvotable');
+      Meteor.call('cancelupvote', this._id);
     }
     else {
     	Meteor.call('upvote', this._id);
     } 
   },
 
-  'click #link-see-comments': function(e) {
-  	if ($('#comments-container').hasClass('display-none'))
+  'click .link-see-comments': function(e) {
+    var containerId = this._id;
+  	if ($('#' + containerId + '2').hasClass('display-none'))
   		{
-  		$('#comments-container').removeClass('display-none');
+  		$('#' + containerId + '2').removeClass('display-none');
 		}  	
   	else {
-  		$('#comments-container').addClass('display-none');
+  		$('#' + containerId + '2').addClass('display-none');
   		}
-  	}
+  	},
 
+  'click #delete-answer': function(e) {
+      if (confirm("Supprimer cette réponse ?")) {
+        var currentAnswerId = this._id;
+        Answers.remove(currentAnswerId);
+        Discussions.update(this.discussionId, {$inc: {answersCount: -1}});
+        Router.go('mainResults');
+      }
+    }
 });
 
 Template.answersItem.helpers({
-	votes: function() {
-		return Answers.findOne(this._id).votes;
-	},
-
 	upvotedClass: function() {
     var userId = Meteor.userId();
     if (userId && !_.include(this.upvoters, userId)) {
@@ -42,7 +40,12 @@ Template.answersItem.helpers({
     } else {
       return 'disabled-customized';
     }
-  }
+  },
+
+  //So that number of comments is correct even when a comment is deleted from Mongol
+  /*commentsCountHelper: function() {
+    return Comments.find({answerId: this._id}).count();
+  }*/
 });
 
 Template.answersItem.helpers({

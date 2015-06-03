@@ -6,6 +6,10 @@ a:hover, a:visited, a:active, a:focus {
 	text-decoration: none;
 }
 
+a {
+	cursor: pointer;
+}
+
 .color-blue-amaya {
 	color: #58B1DB;
 }
