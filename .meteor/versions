@@ -26,6 +26,8 @@ gabrielengel:konecty-magnific-popup@0.9.9
 geojson-utils@1.0.3
 gildaspk:autoform-materialize@0.0.18
 gwendall:session-json@0.1.7
+harrison:babyparse@1.0.1
+harrison:papa-parse@1.1.0
 html-tools@1.0.4
 htmljs@1.0.4
 http@1.1.0
@@ -72,6 +74,7 @@ sha@1.0.3
 spacebars@1.0.6
 spacebars-compiler@1.0.6
 srp@1.0.3
+stevezhu:lodash@3.9.3
 templating@1.1.1
 tracker@1.0.7
 twbs:bootstrap@3.3.4

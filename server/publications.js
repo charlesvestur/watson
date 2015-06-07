@@ -29,3 +29,11 @@ Meteor.publish('comments', function(discussionId) {
 Meteor.publish('notifications', function() {
   return Notifications.find({userId: this.userId, read: false});
 });
+
+Meteor.publish('symptoms', function() {
+  return Symptoms.find({});
+});
+
+Meteor.publish('diseases', function() {
+  return Diseases.find({});
+});
