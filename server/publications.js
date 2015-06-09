@@ -1,18 +1,18 @@
 Meteor.publish('discussions', function(options) {
-  check(options, {
+/*  check(options, {
     sort: Object,
     limit: Number
   });
-  return Discussions.find({}, options);
+*/  return Discussions.find({}, options);
 });
 
 Meteor.publish('singleDiscussion', function(id) {
-  check(id, String);
+//  check(id, String);
   return Discussions.find(id);
 });
 
 Meteor.publish('answers', function(discussionId) {
-  check(discussionId, String);
+//  check(discussionId, String);
   return Answers.find({discussionId: discussionId});
 });
 
@@ -36,4 +36,8 @@ Meteor.publish('symptoms', function() {
 
 Meteor.publish('diseases', function() {
   return Diseases.find({});
+});
+
+Meteor.publish('positions', function() {
+  return Positions.find({});
 });

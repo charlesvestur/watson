@@ -1,0 +1,10 @@
+<template name="symptomsDisplayedList">
+<div id="symptoms-list-container">
+	{{#each symptoms}}
+		{{> symptomsDisplayedItem}}
+	{{/each}}
+	{{#unless ready}}
+		{{> spinner}}
+	{{/unless}}
+</div>
+</template>

@@ -1,0 +1,17 @@
+number;position;specifics;;
+0;;Ventre: Diffus;;
+1;Diffus;Ventre: Haut gauche;;
+2;Ventre;Ventre: Haut milieu;;
+3;Thorax/Poumon;Ventre: Haut droite;;
+4;Gorge/Bouche;Ventre: Milieu gauche;;
+5;Nez;Ventre: Milieu milieu;;
+6;Tête;Ventre: Milieu droite;;
+7;Jambes;Ventre: Bas gauche;;
+8;Bras;Ventre: Bas milieu;;
+9;Poignets;Ventre: Bas droite;;
+10;Peau;;;
+11;Urogénital/Anal;;;
+12;Dos;;;
+13;Yeux;;;
+14;Mains;;;
+15;Pieds;;;

@@ -1,11 +1,13 @@
 <template name="mainSymptomChecker">
 <div>
-   {{> mainSubnavbar}}
+   {{> yield region='subnavbar'}}
 </div>
 <div class="col-xs-4 col-md-4">
 <span class="color-blue-regular headline-symptom-checker">Cliquez sur une zone</span>
 	<div id="human-body-frame" class="center-image-inside-block">
 	<div>
+	<!--Use span below to mask all SVG-->
+	<span>
 		<div class="symbol-containers blue-background symbols-gender" id="gender-male">
 			<svg width="38px" height="40px" viewBox="0 0 84 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 			    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -49,23 +51,25 @@
 			    </g>
 			</svg>
 		</div>
-		<div class="color-blue-regular" id="symptomes-diffus">Symptômes<br/>diffus</div>
+	</span>
+		<a class="color-blue-regular" id="symptomes-diffus" href="{{pathFor 'mainSymptomChecker' position='1'}}">Symptômes<br/>diffus</a>
 	</div>
-		<img id="human-body-img" src="images/body_man_front.jpg" usemap="#symptoms-areas-front">
+		<img id="human-body-img" src="/images/body_man_front.jpg" usemap="#symptoms-areas-front">
+		<!-- URl path starting with / are absolute, the one not starting with / are relative -> the last can cause problem to download the image, because they will refer to the route to know in which folder to search -->
 		<p>
 			<map id="imgmap2015525222953" name="symptoms-areas-front">
-				<area id="head" shape="circle" alt="" title="head" coords="124,48,34" href="" target="" />
-				<area shape="rect" alt="" title="chest" coords="78,101,169,155" href="" target="" />
-				<area shape="rect" alt="" title="arm-right" coords="46,102,70,240" href="" target="" />
-				<area shape="rect" alt="" title="arm-left" coords="175,101,204,236" href="" target="" />
-				<area shape="rect" alt="" title="wrist-right" coords="26,244,59,260" href="" target="" />
-				<area shape="rect" alt="" title="wrist-left" coords="190,240,223,259" href="" target="" />
-				<area shape="rect" alt="" title="hand-right" coords="15,263,60,306" href="" target="" />
-				<area shape="rect" alt="" title="hand-left" coords="189,262,234,308" href="" target="" />
-				<area shape="rect" alt="" title="tummy" coords="87,160,161,244" href="" target="" />
-				<area shape="rect" alt="" title="urogenital" coords="99,248,146,280" href="" target="" />
-				<area shape="rect" alt="" title="legs" coords="83,283,161,489" href="" target="" />
-				<area shape="rect" alt="" title="feet" coords="84,493,161,517" href="" target="" />
+				<a href="{{pathFor 'mainSymptomChecker' position='6'}}"><area id="head" shape="circle" alt="" title="head" coords="124,48,34" href="" target="" /></a>
+				<area shape="rect" alt="" title="chest" coords="78,101,169,155" href="{{pathFor 'mainSymptomChecker' position='3'}}" target="" />
+				<area shape="rect" alt="" title="arm-right" coords="46,102,70,240" href="{{pathFor 'mainSymptomChecker' position='8'}}" target="" />
+				<area shape="rect" alt="" title="arm-left" coords="175,101,204,236" href="{{pathFor 'mainSymptomChecker' position='8'}}" target="" />
+				<area shape="rect" alt="" title="wrist-right" coords="26,244,59,260" href="{{pathFor 'mainSymptomChecker' position='9'}}" target="" />
+				<area shape="rect" alt="" title="wrist-left" coords="190,240,223,259" href="{{pathFor 'mainSymptomChecker' position='9'}}" target="" />
+				<area shape="rect" alt="" title="hand-right" coords="15,263,60,306" href="{{pathFor 'mainSymptomChecker' position='14'}}" target="" />
+				<area shape="rect" alt="" title="hand-left" coords="189,262,234,308" href="{{pathFor 'mainSymptomChecker' position='14'}}" target="" />
+				<area shape="rect" alt="" title="tummy" coords="87,160,161,244" href="{{pathFor 'mainSymptomChecker' position='2'}}" target="" />
+				<area shape="rect" alt="" title="urogenital" coords="99,248,146,280" href="{{pathFor 'mainSymptomChecker' position='11'}}" target="" />
+				<area shape="rect" alt="" title="legs" coords="83,283,161,489" href="{{pathFor 'mainSymptomChecker' position='7'}}" target="" />
+				<area shape="rect" alt="" title="feet" coords="84,493,161,517" href="{{pathFor 'mainSymptomChecker' position='15'}}" target="" />
 				<!-- Created by Online Image Map Editor (http://www.maschek.hu/imagemap/index) -->
 			</map>
 		</p>
@@ -75,7 +79,7 @@
 <div class="col-xs-4 col-md-4">
 <span class="color-blue-regular headline-symptom-checker">Sélectionnez vos symptômes</span>
 	<div class="box-headline" id="area-of-symptoms-selected">Doigt</div>
-	{{> symptomsDisplayedItem}}
+	{{> yield region='symptomsDisplayedList'}}
 </div>
 <div class="col-xs-4 col-md-4">
 <span class="color-blue-regular headline-symptom-checker">Récapitulatif de vos symptômes</span>
