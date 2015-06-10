@@ -1,7 +1,10 @@
 <template name="symptomsSelectedList">
-	<div class="symptomsSelectedItem">
 		{{#each symptomsSelectedItem}}
-			{{> symptomsSelectedItem}}
+			<div class="symptoms-selected-item color-blue-regular">
+				{{this}}
+				<!--{{this.symptom}}-->
+				<!--{{> symptomsSelectedItem}}-->
+				<span class="glyphicon glyphicon-remove remove-symbol color-grey-passive" id="{{symptomId}}"></span>
+			</div>
 		{{/each}}
-	</div>
 </template>

@@ -1,7 +1,7 @@
 Template.discussionSubmit.events({
 
     'click .symptoms-category': function(e) {
-        categoryStatus = 'symptoms',
+        categoryStatus = 'symptoms';
         $('.symptoms-category').toggleClass('color-categories');
         //length permet de tester l'existence
         if($('.svg-symptoms-category-not-selected').length) {
@@ -28,7 +28,7 @@ Template.discussionSubmit.events({
         },
 
     'click .consultation-category': function(e) {
-        categoryStatus = 'consultation',
+        categoryStatus = 'consultation';
         $('.consultation-category').toggleClass('color-categories');
          //length permet de tester l'existence
         if($('.svg-consultation-category-not-selected').length) {
@@ -55,7 +55,7 @@ Template.discussionSubmit.events({
         },
 
     'click .treatment-category': function(e) {
-        categoryStatus = 'treatment',
+        categoryStatus = 'treatment';
         $('.treatment-category').toggleClass('color-categories');
         if($('.svg-treatment-category-not-selected').length) {
             $('.svg-treatment-category-not-selected').attr('class','svg-treatment-category-selected');
@@ -81,7 +81,7 @@ Template.discussionSubmit.events({
         },
 
     'click .convalescence-category': function(e) {
-        categoryStatus = 'convalescence',
+        categoryStatus = 'convalescence';
         $('.convalescence-category').toggleClass('color-categories');
         if($('.svg-convalescence-category-not-selected').length) {
             $('.svg-convalescence-category-not-selected').attr('class','svg-convalescence-category-selected');

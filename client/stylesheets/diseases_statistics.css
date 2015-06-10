@@ -7,58 +7,8 @@
 	font-size: 25px;
 }
 
-.container-disease-chart {
-	display: inline-block;
-	vertical-align: middle;
-	margin: 0px;
-}
-
-.not-selected-disease-name {
-	display: inline-block;
-	font-size: 20px;
-	color:#979797;
-}
-
-.selected-disease-name {
-	display: inline-block;
-	font-size: 20px;
-	color:#58B1DB;
-}
-
-.not-selected-disease-chart {
-	width: 300px;
-	height: 40px;
-	border: 2px;
-	border-style: solid;
-	border-color: #757575;
-	background-color: #E0E0E0;
-	margin-bottom: 15px;
-}
-
-.selected-disease-chart {
-	width: 300px;
-	height: 40px;
-	border: 2px;
-	border-style: solid;
-	border-color: #00838f;
-	background-color: #58B1DB;
-	margin-bottom: 15px;
-}
-
-.not-selected-disease-percentage {
-	display: block;
-	height: 30px;
-	margin-left: 5px;
-	font-size: 30px;
-	color:#979797;
-}
-
-.selected-disease-percentage {
-	display: block;
-	height: 30px;
-	margin-left: 5px;
-	font-size: 30px;
-	color:#FFFFFF;
+#graph-container {
+	font-size: 0px;
 }
 
 .container-disease-statistics {

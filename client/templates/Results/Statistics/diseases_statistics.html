@@ -8,31 +8,11 @@
 		<span class="big-highlighted-stats color-blue-amaya">1000</span> 
 		personnes ayant eu les mêmes symptômes
 	</div>
-	<div class="container-disease-chart" id="grippe">
-		<span class="selected-disease-name">Grippe</span>
-			<div class="selected-disease-chart" id="grippe-chart">
-				<span class="selected-disease-percentage">35%</span>
-			</div>
+	<div id="graph-container">
+		{{#each disease}}
+			{{> diseasesStatisticsItem}}
+		{{/each}}
 	</div>
-	<div class="container-disease-chart" id="no-consultation">
-		<span class="not-selected-disease-name">N'a pas consulté</span>
-			<div class="not-selected-disease-chart" id="no-consultation-chart">
-				<span class="not-selected-disease-percentage">35%</span>
-			</div>
-	</div>
-	<div class="container-disease-chart" id="no-diagnostic">
-		<span class="not-selected-disease-name">Consultation sans diagnostic</span>
-			<div class="not-selected-disease-chart" id="no-diagnostic-chart">
-				<span class="not-selected-disease-percentage">35%</span>
-			</div>
-	</div>
-	<div class="container-disease-chart" id="pneumonia">
-		<span class="not-selected-disease-name">Pneumonie</span>
-			<div class="not-selected-disease-chart" id="pneumonia">
-				<span class="not-selected-disease-percentage">35%</span>
-			</div>
-	</div>
-
 	<div class="triangle-border top">
 		<div class="container-disease-statistics">
 			<svg width="80px" height="80px" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">

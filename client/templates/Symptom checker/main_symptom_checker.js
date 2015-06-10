@@ -1,7 +1,11 @@
-Template.mainSymptomChecker.onCreated(function(){
-	symptomsSelected = [];
-	Session.set('symptomsSelected', symptomsSelected);
+Template.mainSymptomChecker.onRendered(function(){
+	if(Session.get('symptomsSelected')) {}
+	else {
+		symptomsSelected = [];
+		Session.set('symptomsSelected', symptomsSelected);
+	}
 });
+
 
 Template.mainSymptomChecker.events({
 	'click #gender-male': function(e){
@@ -36,8 +40,9 @@ Template.mainSymptomChecker.events({
 		$('#reverse-sign').toggleClass('body-front');
 	},
 
-	'mouseenter #head': function(e){
-		$('#area-of-symptoms-selected').val('Tête');
+	'click #head': function(e){
+		$('#area-of-symptoms-selected').innerHTML = 'Tête';
 		//innerHTML not working...
-		}
+		},
+
 });
