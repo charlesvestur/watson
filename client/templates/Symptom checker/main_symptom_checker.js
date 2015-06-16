@@ -6,6 +6,18 @@ Template.mainSymptomChecker.onRendered(function(){
 	}
 });
 
+Template.mainSymptomChecker.helpers({
+	displayOrNot: function() {
+		var a = Session.get("symptomsSelected");
+		if (a.length > 0) {
+			return "initial";
+		}
+		else {
+			return "none";
+		}
+	}
+});
+
 
 Template.mainSymptomChecker.events({
 	'click #gender-male': function(e){

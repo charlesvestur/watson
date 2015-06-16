@@ -33,7 +33,7 @@ Template.symptomsDisplayedItem.events({
 });
 
 
-//Insert an object {symptom: string} instead of a simple string
+//Insert an object {symptom: string} in the array of the session variable 'symptomsSelected' instead of a simple string
 /*
 Template.symptomsDisplayedItem.events({
 	'click .plus-symbol': function(e){

@@ -11,10 +11,20 @@ Template.diseasesStatisticsItem.helpers({
 
 Template.diseasesStatisticsItem.onRendered(function() {
 	var windowWidth = 100;
-//	var windowWidthPercentage = windowWidth/windowidth;
-//	var windowHeight =$(window).height();
 	var x = Template.currentData().coeff;
 	var disease = Template.currentData().disease.replace(/ /g,'-').replace(/'/g,'-');
 	$('#' + disease).css({'width': windowWidth*x + '%'});
 	var windowWidth2 = ((parseInt($(window).width())) / 2) - 120;
+});
+
+Template.diseasesStatisticsItem.events ({
+	'click .container-disease-chart': function(e) {
+	diseaseid = this.disease.replace(/ /g,'-').replace(/'/g,'-');
+	$('.not-selected-disease-name').removeClass('selected-disease-name');
+	$('.not-selected-disease-chart').removeClass('selected-disease-chart');
+	$('.not-selected-disease-percentage').removeClass('selected-disease-percentage');
+	$('#' + diseaseid + '-name').addClass('selected-disease-name');
+	$('#' + diseaseid + '-chart').addClass('selected-disease-chart');
+	$('#' + diseaseid + '-percentage').addClass('selected-disease-percentage');
+	}
 });

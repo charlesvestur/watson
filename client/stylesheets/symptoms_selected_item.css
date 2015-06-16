@@ -4,5 +4,7 @@
 
 .remove-symbol {
 	font-size: 10px;
+	margin-right: 20px;
 	float: right;
+	cursor: pointer;
 }

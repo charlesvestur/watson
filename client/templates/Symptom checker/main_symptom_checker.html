@@ -1,89 +1,100 @@
 <template name="mainSymptomChecker">
-<div>
-   {{> yield region='subnavbar'}}
-</div>
-<div class="col-xs-4 col-md-4">
-<span class="color-blue-regular headline-symptom-checker">Cliquez sur une zone</span>
-	<div id="human-body-frame" class="center-image-inside-block">
 	<div>
-	<!--Use span below to mask all SVG-->
-	<span>
-		<div class="symbol-containers blue-background symbols-gender" id="gender-male">
-			<svg width="38px" height="40px" viewBox="0 0 84 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-			    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
-			    <title>Shape</title>
-			    <desc>Created with Sketch.</desc>
-			    <defs></defs>
-			    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-			        <g id="gender-male-svg" sketch:type="MSLayerGroup" transform="translate(-8.000000, -5.000000)" class="white-fill" fill="#4A90E2">
-			            <path d="M91.021,6.81 C90.92,5.902 90.748,5.412 90.459,5.181 C88.656,3.783 67.136,10.896 65.802,12.525 L65.622,12.914 C65.586,13.577 68.119,16.035 71.402,18.889 L61.582,30.882 C56.295,27.567 50.074,25.628 43.385,25.628 C24.328,25.628 8.883,41.153 8.883,60.317 C8.883,79.468 24.329,95 43.385,95 C62.443,95 77.888,79.468 77.888,60.317 C77.888,52.202 75.095,44.756 70.457,38.846 C70.5,38.803 70.565,38.782 70.608,38.731 L80.664,26.45 C82.037,27.51 83.247,28.403 84.144,29.03 C87.027,31.027 87.619,31.055 87.971,30.889 L88.267,30.659 C89.773,28.814 91.554,11.552 91.021,6.81 L91.021,6.81 Z M43.385,85.847 C29.352,85.847 17.986,74.415 17.986,60.318 C17.986,46.214 29.352,34.782 43.385,34.782 C57.412,34.782 68.778,46.213 68.778,60.318 C68.778,74.415 57.412,85.847 43.385,85.847 L43.385,85.847 Z" id="Shape" sketch:type="MSShapeGroup"></path>
-			        </g>
-			    </g>
-			</svg>
-		</div>
-		<div class="symbol-containers symbols-gender" id="gender-female">
-			<svg width="28px" height="40px" viewBox="0 0 66 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-			    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
-			    <title>Shape</title>
-			    <desc>Created with Sketch.</desc>
-			    <defs></defs>
-			    <g id="Symbole_femme" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-			        <g id="gender-female-svg" sketch:type="MSLayerGroup" class="#" fill="#4A90E2">
-			            <path d="M55.535,55.034 C68.127,42.441 68.222,22.031 55.63,9.443 C49.337,3.147 41.133,0 32.882,0 C24.631,0 16.405,3.147 10.11,9.443 C-2.478,22.03 -2.208,42.441 10.38,55.034 C15.541,60.193 22,63.234 29,64.164 L29,73 L15,73 L15,82 L29,82 L29,95 L37,95 L37,82 L51,82 L51,73 L37,73 L37,64.165 C44,63.234 50.376,60.193 55.535,55.034 L55.535,55.034 Z M16.446,15.755 C20.847,11.353 26.702,8.927 32.929,8.927 C39.154,8.927 45.007,11.352 49.41,15.756 C53.813,20.158 56.24,26.01 56.24,32.236 C56.24,38.462 53.814,44.317 49.41,48.721 C45.009,53.122 39.156,55.547 32.929,55.547 C26.7,55.547 20.846,53.123 16.448,48.722 C7.359,39.632 7.359,24.843 16.446,15.755 L16.446,15.755 Z" id="Shape" sketch:type="MSShapeGroup"></path>
-			        </g>
-			    </g>
-			</svg>
-		</div>
-		<div class="symbol-containers body-front" id="reverse-sign">
-			<svg width="40px" height="40px" viewBox="0 0 72 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-			    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
-			    <title>Shape</title>
-			    <desc>Created with Sketch.</desc>
-			    <defs></defs>
-			    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-			        <g id="noun_37863_cc" sketch:type="MSLayerGroup" transform="translate(-13.000000, -20.000000)" fill="#4A90E2">
-			            <g id="Your_Icon" transform="translate(12.000000, 20.000000)" sketch:type="MSShapeGroup">
-			                <g id="Group">
-			                    <path d="M18.558,25.613 C19.217,21.613 21.012,18.845 23.776,16.084 C27.32,12.536 32.026,10.814 37.024,10.814 C40.312,10.814 43.544,11.791 46.369,13.418 L49.765,15.439 L54.99,6.402 L51.599,4.46 C47.185,1.912 42.146,0.113 37.025,0.113 C22.032,0.113 9.632,13.613 7.999,25.613 L0.947,25.613 L13.264,45.66 L25.374,25.613 L18.558,25.613 Z M60.696,13.57 L48.586,33.613 L55.396,33.613 C53.669,42.613 46.032,48.612 37.024,48.612 C33.749,48.612 30.527,47.716 27.706,46.097 L24.311,44.129 L19.103,53.192 L22.499,55.139 C26.9,57.666 31.921,59 37.023,59 C44.818,59 52.149,56.032 57.669,50.505 C62.282,45.887 65.177,40.613 65.993,33.613 L73.014,33.613 L60.696,13.57 Z" id="Shape"></path>
-			                </g>
-			            </g>
-			        </g>
-			    </g>
-			</svg>
-		</div>
-	</span>
-		<a class="color-blue-regular" id="symptomes-diffus" href="{{pathFor 'mainSymptomChecker' position='1'}}">Symptômes<br/>diffus</a>
+	   {{> yield region='subnavbar'}}
 	</div>
-		<img id="human-body-img" src="/images/body_man_front.jpg" usemap="#symptoms-areas-front">
-		<!-- URl path starting with / are absolute, the one not starting with / are relative -> the last can cause problem to download the image, because they will refer to the route to know in which folder to search -->
-		<p>
-			<map id="imgmap2015525222953" name="symptoms-areas-front">
-				<a href="{{pathFor 'mainSymptomChecker' position='6'}}"><area id="head" shape="circle" alt="" title="head" coords="124,48,34" href="" target="" /></a>
-				<a href="{{pathFor 'mainSymptomChecker' position='3'}}"><area id="chest" shape="rect" alt="" title="chest" coords="78,101,169,155" href="" target="" /></a>
-				<a href="{{pathFor 'mainSymptomChecker' position='8'}}"><area shape="rect" alt="" title="arm-right" coords="46,102,70,240" href="" target="" /></a>
-				<a  href="{{pathFor 'mainSymptomChecker' position='8'}}"><area shape="rect" alt="" title="arm-left" coords="175,101,204,236" href="" target="" /></a>
-				<a  href="{{pathFor 'mainSymptomChecker' position='9'}}"><area shape="rect" alt="" title="wrist-right" coords="26,244,59,260" href="" target="" /></a>
-				<a  href="{{pathFor 'mainSymptomChecker' position='9'}}"><area shape="rect" alt="" title="wrist-left" coords="190,240,223,259" href="" target="" /></a>
-				<a  href="{{pathFor 'mainSymptomChecker' position='14'}}"><area shape="rect" alt="" title="hand-right" coords="15,263,60,306" href="" target="" /></a>
-				<a  href="{{pathFor 'mainSymptomChecker' position='14'}}"><area shape="rect" alt="" title="hand-left" coords="189,262,234,308" href="" target="" /></a>
-				<a  href="{{pathFor 'mainSymptomChecker' position='2'}}"><area shape="rect" alt="" title="tummy" coords="87,160,161,244" href="" target="" /></a>
-				<a  href="{{pathFor 'mainSymptomChecker' position='11'}}"><area shape="rect" alt="" title="urogenital" coords="99,248,146,280" href="" target="" /></a>
-				<a  href="{{pathFor 'mainSymptomChecker' position='7'}}"><area shape="rect" alt="" title="legs" coords="83,283,161,489" href="" target="" /></a>
-				<a  href="{{pathFor 'mainSymptomChecker' position='15'}}"><area shape="rect" alt="" title="feet" coords="84,493,161,517" href="" target="" /></a>
-				<!-- Created by Online Image Map Editor (http://www.maschek.hu/imagemap/index) -->
-			</map>
-		</p>
+	<div class="col-xs-4 col-md-4">
+	<span class="color-blue-regular headline-symptom-checker">Cliquez sur une zone</span>
+		<div id="human-body-frame" class="center-image-inside-block">
+		<div>
+		<!--Use span below to mask all SVG-->
+		<span>
+			<div class="symbol-containers blue-background symbols-gender" id="gender-male">
+				<svg width="38px" height="40px" viewBox="0 0 84 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+				    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+				    <title>Shape</title>
+				    <desc>Created with Sketch.</desc>
+				    <defs></defs>
+				    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+				        <g id="gender-male-svg" sketch:type="MSLayerGroup" transform="translate(-8.000000, -5.000000)" class="white-fill" fill="#4A90E2">
+				            <path d="M91.021,6.81 C90.92,5.902 90.748,5.412 90.459,5.181 C88.656,3.783 67.136,10.896 65.802,12.525 L65.622,12.914 C65.586,13.577 68.119,16.035 71.402,18.889 L61.582,30.882 C56.295,27.567 50.074,25.628 43.385,25.628 C24.328,25.628 8.883,41.153 8.883,60.317 C8.883,79.468 24.329,95 43.385,95 C62.443,95 77.888,79.468 77.888,60.317 C77.888,52.202 75.095,44.756 70.457,38.846 C70.5,38.803 70.565,38.782 70.608,38.731 L80.664,26.45 C82.037,27.51 83.247,28.403 84.144,29.03 C87.027,31.027 87.619,31.055 87.971,30.889 L88.267,30.659 C89.773,28.814 91.554,11.552 91.021,6.81 L91.021,6.81 Z M43.385,85.847 C29.352,85.847 17.986,74.415 17.986,60.318 C17.986,46.214 29.352,34.782 43.385,34.782 C57.412,34.782 68.778,46.213 68.778,60.318 C68.778,74.415 57.412,85.847 43.385,85.847 L43.385,85.847 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+				        </g>
+				    </g>
+				</svg>
+			</div>
+			<div class="symbol-containers symbols-gender" id="gender-female">
+				<svg width="28px" height="40px" viewBox="0 0 66 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+				    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+				    <title>Shape</title>
+				    <desc>Created with Sketch.</desc>
+				    <defs></defs>
+				    <g id="Symbole_femme" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+				        <g id="gender-female-svg" sketch:type="MSLayerGroup" class="#" fill="#4A90E2">
+				            <path d="M55.535,55.034 C68.127,42.441 68.222,22.031 55.63,9.443 C49.337,3.147 41.133,0 32.882,0 C24.631,0 16.405,3.147 10.11,9.443 C-2.478,22.03 -2.208,42.441 10.38,55.034 C15.541,60.193 22,63.234 29,64.164 L29,73 L15,73 L15,82 L29,82 L29,95 L37,95 L37,82 L51,82 L51,73 L37,73 L37,64.165 C44,63.234 50.376,60.193 55.535,55.034 L55.535,55.034 Z M16.446,15.755 C20.847,11.353 26.702,8.927 32.929,8.927 C39.154,8.927 45.007,11.352 49.41,15.756 C53.813,20.158 56.24,26.01 56.24,32.236 C56.24,38.462 53.814,44.317 49.41,48.721 C45.009,53.122 39.156,55.547 32.929,55.547 C26.7,55.547 20.846,53.123 16.448,48.722 C7.359,39.632 7.359,24.843 16.446,15.755 L16.446,15.755 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+				        </g>
+				    </g>
+				</svg>
+			</div>
+			<div class="symbol-containers body-front" id="reverse-sign">
+				<svg width="40px" height="40px" viewBox="0 0 72 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+				    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+				    <title>Shape</title>
+				    <desc>Created with Sketch.</desc>
+				    <defs></defs>
+				    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+				        <g id="noun_37863_cc" sketch:type="MSLayerGroup" transform="translate(-13.000000, -20.000000)" fill="#4A90E2">
+				            <g id="Your_Icon" transform="translate(12.000000, 20.000000)" sketch:type="MSShapeGroup">
+				                <g id="Group">
+				                    <path d="M18.558,25.613 C19.217,21.613 21.012,18.845 23.776,16.084 C27.32,12.536 32.026,10.814 37.024,10.814 C40.312,10.814 43.544,11.791 46.369,13.418 L49.765,15.439 L54.99,6.402 L51.599,4.46 C47.185,1.912 42.146,0.113 37.025,0.113 C22.032,0.113 9.632,13.613 7.999,25.613 L0.947,25.613 L13.264,45.66 L25.374,25.613 L18.558,25.613 Z M60.696,13.57 L48.586,33.613 L55.396,33.613 C53.669,42.613 46.032,48.612 37.024,48.612 C33.749,48.612 30.527,47.716 27.706,46.097 L24.311,44.129 L19.103,53.192 L22.499,55.139 C26.9,57.666 31.921,59 37.023,59 C44.818,59 52.149,56.032 57.669,50.505 C62.282,45.887 65.177,40.613 65.993,33.613 L73.014,33.613 L60.696,13.57 Z" id="Shape"></path>
+				                </g>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</div>
+		</span>
+			<a class="color-blue-regular" id="symptomes-diffus" href="{{pathFor 'mainSymptomChecker' position='1'}}">Symptômes<br/>diffus</a>
+		</div>
+		<!--Use span below to mask image mapping-->
+		<span> 
+			<img id="human-body-img" src="/images/body_man_front.jpg" usemap="#symptoms-areas-front">
+			<!-- URl path starting with / are absolute, the one not starting with / are relative -> the last can cause problem to download the image, because they will refer to the route to know in which folder to search -->
+			<p>
+				<map id="imgmap2015525222953" name="symptoms-areas-front">
+					<a href="{{pathFor 'mainSymptomChecker' position='6'}}"><area id="head" shape="circle" alt="" title="head" coords="124,48,34" href="" target="" /></a>
+					<a href="{{pathFor 'mainSymptomChecker' position='3'}}"><area id="chest" shape="rect" alt="" title="chest" coords="78,101,169,155" href="" target="" /></a>
+					<a href="{{pathFor 'mainSymptomChecker' position='8'}}"><area shape="rect" alt="" title="arm-right" coords="46,102,70,240" href="" target="" /></a>
+					<a  href="{{pathFor 'mainSymptomChecker' position='8'}}"><area shape="rect" alt="" title="arm-left" coords="175,101,204,236" href="" target="" /></a>
+					<a  href="{{pathFor 'mainSymptomChecker' position='9'}}"><area shape="rect" alt="" title="wrist-right" coords="26,244,59,260" href="" target="" /></a>
+					<a  href="{{pathFor 'mainSymptomChecker' position='9'}}"><area shape="rect" alt="" title="wrist-left" coords="190,240,223,259" href="" target="" /></a>
+					<a  href="{{pathFor 'mainSymptomChecker' position='14'}}"><area shape="rect" alt="" title="hand-right" coords="15,263,60,306" href="" target="" /></a>
+					<a  href="{{pathFor 'mainSymptomChecker' position='14'}}"><area shape="rect" alt="" title="hand-left" coords="189,262,234,308" href="" target="" /></a>
+					<a  href="{{pathFor 'mainSymptomChecker' position='2'}}"><area shape="rect" alt="" title="tummy" coords="87,160,161,244" href="" target="" /></a>
+					<a  href="{{pathFor 'mainSymptomChecker' position='11'}}"><area shape="rect" alt="" title="urogenital" coords="99,248,146,280" href="" target="" /></a>
+					<a  href="{{pathFor 'mainSymptomChecker' position='7'}}"><area shape="rect" alt="" title="legs" coords="83,283,161,489" href="" target="" /></a>
+					<a  href="{{pathFor 'mainSymptomChecker' position='15'}}"><area shape="rect" alt="" title="feet" coords="84,493,161,517" href="" target="" /></a>
+					<!-- Created by Online Image Map Editor (http://www.maschek.hu/imagemap/index) -->
+				</map>
+			</p>
+		</span>
+		</div>
 	</div>
-</div>
 
-<div class="col-xs-4 col-md-4">
-<span class="color-blue-regular headline-symptom-checker">Sélectionnez vos symptômes</span>
-	<div class="box-headline" id="area-of-symptoms-selected">xxx</div>
-	{{> yield region='symptomsDisplayedList'}}
-</div>
-<div class="col-xs-4 col-md-4">
-<span class="color-blue-regular headline-symptom-checker" id="symptoms-summary">Récapitulatif de vos symptômes</span>
-	{{> symptomsSelectedList}}
-</div>
-
+	<div class="col-xs-4 col-md-4">
+	<span class="color-blue-regular headline-symptom-checker">Sélectionnez vos symptômes</span>
+		<div class="box-headline" id="area-of-symptoms-selected">xxx</div>
+		{{> yield region='symptomsDisplayedList'}}
+	</div>
+	<div class="col-xs-4 col-md-4">
+	<span class="color-blue-regular headline-symptom-checker" id="symptoms-summary">Récapitulatif de vos symptômes</span>
+		{{> symptomsSelectedList}}
+	<div style="display:{{displayOrNot}}">
+		<a class="box-headline" id="know-diagnosis" href="">
+		Connaitre les diagnostics
+		</a>
+		<form name="myhealthform">
+			<input type="radio" name="myhealth" value="register">
+			Ne pas enregistrer dans le carnet de santé<br>
+		</form>
+	</div>
+	</div>
 </template>
