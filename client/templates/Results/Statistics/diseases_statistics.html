@@ -1,13 +1,20 @@
 <template name="diseasesStatistics">
 <div class="col-md-12">
+	<div><span id="your-symptoms">Vos symptômes:</span><br/>
+		{{#each symptomsSelected}}
+			- {{this}}<br/>
+		{{/each}}
+	</div>
+
 	<div class="color-blue-regular" id="regular-sentence">
-		<span class="big-highlighted-stats color-blue-amaya">350</span> 
+		<span class="big-highlighted-stats color-blue-amaya">{{numberofCases}}</span> 
 		cas de 
-		<span class="big-highlighted-stats color-blue-amaya">grippe</span> 
+		<span class="big-highlighted-stats color-blue-amaya">{{diseaseCase}}</span> 
 		sur 
 		<span class="big-highlighted-stats color-blue-amaya">1000</span> 
 		personnes ayant eu les mêmes symptômes
 	</div>
+
 	<div id="graph-container">
 		{{#each disease}}
 			{{> diseasesStatisticsItem}}

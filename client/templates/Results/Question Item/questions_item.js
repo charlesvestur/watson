@@ -14,7 +14,7 @@ Template.questionsItem.helpers({
     },*/
 
     starstyle: function() {
-        if (Discussions.findOne(this._id).followedby.indexOf(Meteor.userId()) > -1){
+        if (Meteor.users.findOne({_id: Meteor.userId()}).discussionsFollowed.indexOf(this._id) > -1){
             return 'color-yellow glyphicon-star';
         }
         else {
@@ -29,12 +29,19 @@ Template.questionsItem.helpers({
 
 Template.questionsItem.events({
     'click .star': function(e) {
-        var starId = this._id;  
+        var starId = this._id;
+        var doc = Meteor.users.findOne({_id: Meteor.userId()});
         if ($('#' + starId).hasClass("color-yellow")){
-            Discussions.update({_id: this._id}, {$pull: {followedby: Meteor.userId()}});
+
+            Meteor.users.update({_id: doc._id}, {$pull: {discussionsFollowed: this._id}});
         }
         else {
-            Discussions.update({_id: this._id}, {$push: {followedby: Meteor.userId()}});
+            if (doc.discussionsFollowed){
+                Meteor.users.update({_id: doc._id}, {$push: {discussionsFollowed: this._id}});
+            }
+            else {
+                Meteor.users.update({_id: doc._id}, {$set: {discussionsFollowed: [this._id]}});
+            }
             e.stopPropagation();
         }
     },

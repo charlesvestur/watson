@@ -18,7 +18,7 @@ Template.symptomsDisplayedItem.events({
 			var m = Session.get("symptomsSelected");
 			    m = _.extend([], m); //Creates a new array
 			    m.push(this.name);
-			    Session.set('symptomsSelected', m);
+			    Session.setAuth('symptomsSelected', m);
 //In order for the change event to be triggered, Meteor needs to have a new reference for the array, not just an updated copy of the old one.
 //In brief, in order to have the 'correct' behaviour, you'll need to clone the array, make the changes you want, and then do Session.set('foo', myCopiedArray).
 		}
@@ -27,7 +27,7 @@ Template.symptomsDisplayedItem.events({
 			    a = _.extend([], a); 
 			var index = a.indexOf(this.name);
 				a.splice(index, 1);
-			    Session.set('symptomsSelected', a);
+			    Session.setAuth('symptomsSelected', a);
 		}
 	}
 });

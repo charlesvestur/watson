@@ -1,6 +1,10 @@
-/*Template.layout.onRendered(function(){
-	this.$('#login-dropdown-list').css({
-	top: '35px',
-	left: '-105px'
-})
-})*/
+/*Template.layout.events({
+	'click #login-buttons-password': function(e) {
+	    var userinfos = {
+	        userId: Meteor,
+	        question: $(e.target).find('[name=question]').val(),
+            category: categoryStatus
+	    };
+	}
+});
+*/

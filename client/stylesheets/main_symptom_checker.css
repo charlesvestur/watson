@@ -61,19 +61,35 @@ div .symbols-gender {
 	text-align: center;
 }
 
+#area-of-symptoms-hovered {
+
+}
+
 #area-of-symptoms-selected {
 	margin-top: 10px;
 	margin-right: 20px;
 }
 
 #symptoms-summary {
-	display: inline-block;
+	display: block;
 	margin-bottom: 30px;
 }
 
 #know-diagnosis {
 	margin-top: 20px;
+	margin-bottom: 10px;
 	display: inline-block;
 	border-radius: 5px;
 	padding: 10px 20px 10px 20px;
+	cursor: pointer;
+}
+
+#delete-all {
+	float: right; /* Works thanks to <br/> in HTML code */
+	vertical-align: middle;
+	cursor: pointer;	
+}
+
+#myhealth-checkbox {
+	position: initial;
 }

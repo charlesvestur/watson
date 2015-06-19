@@ -1,0 +1,15 @@
+<template name="myHealthRecordItem">
+		<tr>
+			<td>{{date}}</td>
+			<td>
+			{{#each symptoms}}
+				{{this}}<br/>
+			{{/each}}
+			</td>
+			<td class="glyphicon glyphicon-arrow-right"></td>
+			<td>Généraliste</td>
+			<td>Grippe</td>
+			<td>Convalescence</td>
+			<td class="glyphicon glyphicon-remove-sign"></td>
+		</tr>
+</template>

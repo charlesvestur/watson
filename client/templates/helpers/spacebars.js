@@ -19,6 +19,11 @@ Template.registerHelper('currentItemDataContextId', function() {
     }    
 );
 
+Template.registerHelper('currentUserId', function() {
+    return Meteor.userId();
+    }    
+);
+
 Template.registerHelper('displayIfOwnsItem', function() {
     if (this.userId == Meteor.userId()){
         return 'initial';
@@ -27,6 +32,10 @@ Template.registerHelper('displayIfOwnsItem', function() {
         return 'none';
     }
 });
+
+Template.registerHelper('symptomsSelected', function() {
+        return Session.get('symptomsSelected');
+    });
 
 moment.locale('fr', {
     months : "janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre".split("_"),

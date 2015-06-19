@@ -41,3 +41,12 @@ Meteor.publish('diseases', function() {
 Meteor.publish('positions', function() {
   return Positions.find({});
 });
+
+Meteor.publish("userData", function () {
+  if (this.userId) {
+    return Meteor.users.find({_id: this.userId},
+                            {fields: {'userSymptoms': 1, 'discussionsFollowed': 1}});
+  } else {
+    this.ready();
+  }
+});

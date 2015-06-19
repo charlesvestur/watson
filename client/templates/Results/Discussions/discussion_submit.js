@@ -1,4 +1,35 @@
+Template.discussionSubmit.onRendered(function(){
+    if(Session.get('symptomsSelected')) {}
+    else {
+        symptomsSelected = [];
+        Session.setAuth('symptomsSelected', symptomsSelected);
+    }
+});
+
 Template.discussionSubmit.events({
+
+    //To insert implied attributes ("author", "submitted", ...)  
+    'submit form': function(e) {
+        e.preventDefault();
+    //-> First, we create the object 'discussion' when the users submits the form with the attributes he filled in
+        var discussion = {
+            title: $(e.target).find('[name=title]').val(),
+            question: $(e.target).find('[name=question]').val(),
+            diagnosis: $(e.target).find('[name=diagnosis]').val(),
+            hashtags: $(e.target).find('[name=hashtags]').val(),
+            category: categoryStatus,
+            symptoms: Session.get('symptomsSelected').sort()
+        };
+
+
+    //Then, we apply our discussionInsert function to the object 'discussion'
+        Meteor.call('discussionInsert', discussion, function(error, result) {
+        // affiche l'erreur à l'utilisateur et s'interrompt
+        if (error)
+            return alert(error.reason);
+        });
+        Router.go('mainResults');
+    },
 
     'click .symptoms-category': function(e) {
         categoryStatus = 'symptoms';
@@ -104,34 +135,7 @@ Template.discussionSubmit.events({
                 $('.svg-treatment-category-selected').attr('class','svg-treatment-category-not-selected');
         }
         else {}
-        },
+        }
 
-    //To insert implied attributes ("author", "submitted", ...)  
-    'submit form': function(e) {
-	    e.preventDefault();
-    //-> First, we create the object 'discussion' when the users submits the form with the attributes he filled in
-	    var discussion = {
-	        title: $(e.target).find('[name=title]').val(),
-	        question: $(e.target).find('[name=question]').val(),
-            category: categoryStatus
-	    };
-
-
-    //Then, we apply our discussionInsert function to the object 'discussion'
-        Meteor.call('discussionInsert', discussion, function(error, result) {
-	    // affiche l'erreur à l'utilisateur et s'interrompt
-	    if (error)
-	        return alert(error.reason);
-	    Router.go('mainResults');
-	    });
-	}
 });
 
-/*Template.mainResults.helpers({
-    discussionsList : function () {
-         return Session.equals("discussionsList", "discussionsList")  
-    },
-    discussionSubmit : function () {
-         return Session.equals("discussionSubmit", "discussionSubmit")  
-    }
- });*/

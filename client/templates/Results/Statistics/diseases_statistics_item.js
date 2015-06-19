@@ -14,7 +14,7 @@ Template.diseasesStatisticsItem.onRendered(function() {
 	var x = Template.currentData().coeff;
 	var disease = Template.currentData().disease.replace(/ /g,'-').replace(/'/g,'-');
 	$('#' + disease).css({'width': windowWidth*x + '%'});
-	var windowWidth2 = ((parseInt($(window).width())) / 2) - 120;
+//	var windowWidth2 = ((parseInt($(window).width())) / 2) - 120;
 });
 
 Template.diseasesStatisticsItem.events ({
@@ -26,5 +26,6 @@ Template.diseasesStatisticsItem.events ({
 	$('#' + diseaseid + '-name').addClass('selected-disease-name');
 	$('#' + diseaseid + '-chart').addClass('selected-disease-chart');
 	$('#' + diseaseid + '-percentage').addClass('selected-disease-percentage');
+	Session.set('diseaseSelected', this);
 	}
 });
