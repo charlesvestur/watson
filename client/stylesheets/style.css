@@ -1,5 +1,6 @@
 html {
-	font-family: "Calibri";
+	font-family: 'Gotham Rounded', Arial, sans-serif;
+	background-color: white;
 }
 
 a:hover, a:visited, a:active, a:focus {
@@ -34,8 +35,9 @@ a {
 
 .box-headline {
 	color: white;
-	background-color: #4A90E2;
+	background: #4A90E2;
 	text-align: center;
+	padding: 5px 0px 5px 0px;
 }
 
 .overlay {
@@ -49,6 +51,10 @@ a {
     /* Ci-dessous, nous appliquons un background de couleur noire et d'opacité 0.*.*/
     background-color: rgba(0,0,0,0.7);
     z-index: 999;
+}
+
+.glyphicon-remove-sign {
+	cursor: pointer;
 }
 
 

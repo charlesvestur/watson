@@ -1,0 +1,18 @@
+.hashtag-container {
+	padding: 10px 5px 10px 5px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.hashtag {
+	display: block;
+	color: #979797;
+	font-size: 18px;
+}
+
+.nbOfMentions {
+	display: block;
+	color: #979797;
+	line-height: 80%;
+	font-size: 14px;
+}

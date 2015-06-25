@@ -6,11 +6,29 @@ Template.discussionSubmit.onRendered(function(){
     }
 });
 
+AutoForm.hooks({    
+    discussionSubmit: {
+      before: {
+        insert: function(doc) {
+          doc.userId = Meteor.userId();
+          doc.author = Meteor.users.findOne({_id: Meteor.userId()}).username;
+          doc.category = categoryStatus;
+          doc.symptoms = Session.get('symptomsSelected').sort();
+          doc.submitted = new Date();
+          doc.answersCount = 0;
+          doc.votesCount = 0;
+          doc.followedby = [];
+          this.result(doc);
+        }
+      } 
+    }     
+  });
+
 Template.discussionSubmit.events({
 
     //To insert implied attributes ("author", "submitted", ...)  
     'submit form': function(e) {
-        e.preventDefault();
+/*        e.preventDefault();
     //-> First, we create the object 'discussion' when the users submits the form with the attributes he filled in
         var discussion = {
             title: $(e.target).find('[name=title]').val(),
@@ -28,11 +46,11 @@ Template.discussionSubmit.events({
         if (error)
             return alert(error.reason);
         });
-        Router.go('mainResults');
+*/        Router.go('mainResults');
     },
 
     'click .symptoms-category': function(e) {
-        categoryStatus = 'symptoms';
+        categoryStatus = 'Symptômes';
         $('.symptoms-category').toggleClass('color-categories');
         //length permet de tester l'existence
         if($('.svg-symptoms-category-not-selected').length) {
@@ -59,7 +77,7 @@ Template.discussionSubmit.events({
         },
 
     'click .consultation-category': function(e) {
-        categoryStatus = 'consultation';
+        categoryStatus = 'Consultation';
         $('.consultation-category').toggleClass('color-categories');
          //length permet de tester l'existence
         if($('.svg-consultation-category-not-selected').length) {
@@ -86,7 +104,7 @@ Template.discussionSubmit.events({
         },
 
     'click .treatment-category': function(e) {
-        categoryStatus = 'treatment';
+        categoryStatus = 'Traitement';
         $('.treatment-category').toggleClass('color-categories');
         if($('.svg-treatment-category-not-selected').length) {
             $('.svg-treatment-category-not-selected').attr('class','svg-treatment-category-selected');
@@ -112,7 +130,7 @@ Template.discussionSubmit.events({
         },
 
     'click .convalescence-category': function(e) {
-        categoryStatus = 'convalescence';
+        categoryStatus = 'Convalescence';
         $('.convalescence-category').toggleClass('color-categories');
         if($('.svg-convalescence-category-not-selected').length) {
             $('.svg-convalescence-category-not-selected').attr('class','svg-convalescence-category-selected');

@@ -1,3 +1,15 @@
 <template name="myDiscussionsFollowedItem">
-
+	<tr>
+		<td class="glyphicon glyphicon-remove-sign"></td>
+		<td>{{date}}</td>
+		<td>{{title}}</td>
+		<td class="glyphicon glyphicon-arrow-right"></td>
+		<td>{{category}}</td>
+		<td>
+		{{#each hashtags}}
+			{{this}}<br/>
+		{{/each}}
+		</td>
+		<td>{{diagnosis}}</td>
+	</tr>
 </template>

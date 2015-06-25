@@ -7,7 +7,6 @@
 meteor-platform
 twbs:bootstrap
 underscore
-materialize:materialize
 aldeed:collection2
 msavin:mongol
 iron:router
@@ -27,3 +26,6 @@ reactive-var
 u2622:persistent-session
 nemo64:bootstrap
 fortawesome:fontawesome
+semantic:ui-css
+meteoric:ionic
+materialize:materialize

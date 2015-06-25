@@ -10,6 +10,7 @@ Meteor.startup(function(){
 	var array = csvparsed.data; //Baby.parse renders an object with 4 keys: data (array of objects with results), errors, meta, proto 
 	var symptomsCompleteArray = [];
 	var symptomsNameArray = [];
+	var sympIndex = 0;
 	for (var i = 0; i < array.length; i++) {
 		disease = array[i]; //disease is an object
 		var diseaseObject = {};
@@ -58,7 +59,7 @@ Meteor.startup(function(){
 						symptomsNameArray.push(disease[symptomN].name);
 						for (var k = 0; k < symptomsNameArray.length; k++) {
 							if (symptomsNameArray[k] == disease[symptomN].name)
-								nbOfOccurences = nbOfOccurences + 1;
+								nbOfOccurences += 1;
 						}
 						var subpositionsNb = 'subpositions' + nbOfOccurences;
 						var qualifiersNb = 'qualifiers' + nbOfOccurences;
@@ -73,6 +74,8 @@ Meteor.startup(function(){
 							else if (qualifiersString) {
 								(disease[symptomN])[qualifiersNb] = qualifiersArray;
 							}
+							disease[symptomN].sympIndex = sympIndex;
+							sympIndex = sympIndex + 1;
 							Symptoms.insert(disease[symptomN]);
 						}
 						else if (symptomsCompleteArray.indexOf(symptomCompleteString) === -1){ //If the name has already appeard, but with different subpositions and/or qualifiers
@@ -98,7 +101,7 @@ Meteor.startup(function(){
 
 						disease[symptomN].diseaseCoeff = 1; //Sets importance of symptom for disease
 						delete disease[symptomN].gender; //Deletes gender, which is not needed in the Diseases database
-
+						delete disease[symptomN].sympIndex; //Deletes sympIndex, which is not needed in the Diseases database
 					}
 				}
 				else {
@@ -192,6 +195,27 @@ Meteor.startup(function(){
 		}
 		Diseases.insert(disease);
 	}
+	//Creates vector for each disease
+	Diseases.find({}).forEach(function(disease){
+		var vector = [];
+		for (k=0; k < Symptoms.find({}).count(); k++){
+				vector.push(0);
+			}
+		var diseaseKeys = Object.keys(disease);
+		var n = 0;
+		for (var j = 0; j < diseaseKeys.length; j++) {
+			if (diseaseKeys[j].indexOf('symptom') > -1){
+				n = n + 1;
+			}
+		}
+		for(i = 1; i <= n; i++){
+			var symptomNb = 'symptom' + i;
+			var index = Symptoms.findOne({name: disease[symptomNb].name}).sympIndex;
+			vector[index] = 1*disease[symptomNb].diseaseCoeff;
+		}
+//	console.log(vector.length);
+	Diseases.update({_id: disease._id}, {$set: {diseaseVector: vector}});
+	});
 });
 */
 

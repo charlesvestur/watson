@@ -1,6 +1,6 @@
 Template.diseasesStatisticsItem.helpers({
 	percentage: function() {
-		var percent = this.coeff*100;
+		var percent = (this.coeff*100).toFixed(0); 
 		return (percent + '%');
 	},
 	diseaseId: function() {
@@ -13,8 +13,12 @@ Template.diseasesStatisticsItem.onRendered(function() {
 	var windowWidth = 100;
 	var x = Template.currentData().coeff;
 	var disease = Template.currentData().disease.replace(/ /g,'-').replace(/'/g,'-');
-	$('#' + disease).css({'width': windowWidth*x + '%'});
-//	var windowWidth2 = ((parseInt($(window).width())) / 2) - 120;
+	if (x >= minimumCoeff){ //minimumCoeff is defined in diseases_statistics.js
+		$('#' + disease).css({'width': windowWidth*x + '%'});
+	}
+	else {
+		$('#' + disease).css({'width': windowWidth*x*(1/othersCoeff) + '%'}); //othersCoeff is defined in diseases_statistics.js
+	}
 });
 
 Template.diseasesStatisticsItem.events ({

@@ -59,25 +59,49 @@
 					<span> 
 						<div class="color-blue-regular" id="area-of-symptoms-hovered">&nbsp;</div>
 						<!--Do not forget to add class "body-part head", "body-part legs", etc... to image mapping-->
-						<img id="human-body-img" src="/images/body_man_front.jpg" usemap="#symptoms-areas-front">
+						<img id="human-body-img" src="/images/body_man_front.jpg" usemap="#symptoms-areas-man-front">
 						<!-- URl path starting with / are absolute, the one not starting with / are relative -> the last can cause problem to download the image, because they will refer to the route to know in which folder to search -->
-						<p>
-							<map id="imgmap2015525222953" name="symptoms-areas-front">
-								<a class="body-part head" href="{{pathFor 'mainSymptomChecker' position='6'}}"><area  shape="circle" alt="" title="head" coords="124,48,34" href="" target="" /></a>
-								<a class="body-part chest" href="{{pathFor 'mainSymptomChecker' position='3'}}"><area shape="rect" alt="" title="chest" coords="78,101,169,155" href="" target="" /></a>
-								<a class="body-part arms" href="{{pathFor 'mainSymptomChecker' position='8'}}"><area shape="rect" alt="" title="arm-right" coords="46,102,70,240" href="" target="" /></a>
-								<a  class="body-part arms" href="{{pathFor 'mainSymptomChecker' position='8'}}"><area class="body-part arms" shape="rect" alt="" title="arm-left" coords="175,101,204,236" href="" target="" /></a>
-								<a  class="body-part wrists" href="{{pathFor 'mainSymptomChecker' position='9'}}"><area shape="rect" alt="" title="wrist-right" coords="26,244,59,260" href="" target="" /></a>
-								<a  class="body-part wrists" href="{{pathFor 'mainSymptomChecker' position='9'}}"><area shape="rect" alt="" title="wrist-left" coords="190,240,223,259" href="" target="" /></a>
-								<a  class="body-part hands" href="{{pathFor 'mainSymptomChecker' position='14'}}"><area shape="rect" alt="" title="hand-right" coords="15,263,60,306" href="" target="" /></a>
-								<a  class="body-part hands" href="{{pathFor 'mainSymptomChecker' position='14'}}"><area shape="rect" alt="" title="hand-left" coords="189,262,234,308" href="" target="" /></a>
-								<a  class="body-part tummy" href="{{pathFor 'mainSymptomChecker' position='2'}}"><area shape="rect" alt="" title="tummy" coords="87,160,161,244" href="" target="" /></a>
-								<a  class="body-part urogenital" href="{{pathFor 'mainSymptomChecker' position='11'}}"><area shape="rect" alt="" title="urogenital" coords="99,248,146,280" href="" target="" /></a>
-								<a  class="body-part legs" href="{{pathFor 'mainSymptomChecker' position='7'}}"><area shape="rect" alt="" title="legs" coords="83,283,161,489" href="" target="" /></a>
-								<a  class="body-part feet" href="{{pathFor 'mainSymptomChecker' position='15'}}"><area shape="rect" alt="" title="feet" coords="84,493,161,517" href="" target="" /></a>
+							<map id="imgmap2015525222953" name="symptoms-areas-man-front">
+								<a class="body-part head" href="{{pathFor 'mainSymptomChecker' position='6' gender='M'}}"><area  shape="circle" alt="" title="head" coords="124,48,34" href="" target="" /></a>
+								<a class="body-part chest" href="{{pathFor 'mainSymptomChecker' position='3' gender='M'}}"><area shape="rect" alt="" title="chest" coords="78,101,169,155" href="" target="" /></a>
+								<a class="body-part arms" href="{{pathFor 'mainSymptomChecker' position='8' gender='M'}}"><area shape="rect" alt="" title="arm-right" coords="46,102,70,240" href="" target="" /></a>
+								<a  class="body-part arms" href="{{pathFor 'mainSymptomChecker' position='8' gender='M'}}"><area class="body-part arms" shape="rect" alt="" title="arm-left" coords="175,101,204,236" href="" target="" /></a>
+								<a  class="body-part wrists" href="{{pathFor 'mainSymptomChecker' position='9' gender='M'}}"><area shape="rect" alt="" title="wrist-right" coords="26,244,59,260" href="" target="" /></a>
+								<a  class="body-part wrists" href="{{pathFor 'mainSymptomChecker' position='9' gender='M'}}"><area shape="rect" alt="" title="wrist-left" coords="190,240,223,259" href="" target="" /></a>
+								<a  class="body-part hands" href="{{pathFor 'mainSymptomChecker' position='14' gender='M'}}"><area shape="rect" alt="" title="hand-right" coords="15,263,60,306" href="" target="" /></a>
+								<a  class="body-part hands" href="{{pathFor 'mainSymptomChecker' position='14' gender='M'}}"><area shape="rect" alt="" title="hand-left" coords="189,262,234,308" href="" target="" /></a>
+								<a  class="body-part tummy" href="{{pathFor 'mainSymptomChecker' position='2' gender='M'}}"><area shape="rect" alt="" title="tummy" coords="87,160,161,244" href="" target="" /></a>
+								<a  class="body-part urogenital" href="{{pathFor 'mainSymptomChecker' position='11' gender='M'}}"><area shape="rect" alt="" title="urogenital" coords="99,248,146,280" href="" target="" /></a>
+								<a  class="body-part legs" href="{{pathFor 'mainSymptomChecker' position='7' gender='M'}}"><area shape="rect" alt="" title="legs" coords="83,283,161,489" href="" target="" /></a>
+								<a  class="body-part feet" href="{{pathFor 'mainSymptomChecker' position='15' gender='M'}}"><area shape="rect" alt="" title="feet" coords="84,493,161,517" href="" target="" /></a>
 								<!-- Created by Online Image Map Editor (http://www.maschek.hu/imagemap/index) -->
 							</map>
-						</p>
+							<map id="imgmap2015624112154" name="symptoms-areas-woman-front">
+								<a class="body-part head" href="{{pathFor 'mainSymptomChecker' position='6' gender='F'}}"><area shape="circle" alt="" title="" coords="125,38,33" href="" target="" /></a>
+								<a class="body-part chest" href="{{pathFor 'mainSymptomChecker' position='3' gender='F'}}"><area shape="rect" alt="" title="" coords="84,90,165,154" href="" target="" /></a>
+								<a  class="body-part tummy" href="{{pathFor 'mainSymptomChecker' position='2' gender='F'}}"><area shape="rect" alt="" title="" coords="88,159,160,219" href="" target="" /></a>
+								<a  class="body-part urogenital" href="{{pathFor 'mainSymptomChecker' position='11' gender='F'}}"><area shape="rect" alt="" title="" coords="78,223,171,268" href="" target="" /></a>
+								<a  class="body-part legs" href="{{pathFor 'mainSymptomChecker' position='7' gender='F'}}"><area shape="rect" alt="" title="" coords="79,272,170,457" href="" target="" /></a>
+								<a  class="body-part feet" href="{{pathFor 'mainSymptomChecker' position='15' gender='F'}}"><area shape="rect" alt="" title="" coords="78,462,173,499" href="" target="" /></a>
+								<a class="body-part arms" href="{{pathFor 'mainSymptomChecker' position='8' gender='F'}}"><area shape="rect" alt="" title="" coords="47,87,71,217" href="" target="" /></a>
+								<a class="body-part arms" href="{{pathFor 'mainSymptomChecker' position='8' gender='F'}}"><area shape="rect" alt="" title="" coords="176,84,198,218" href="" target="" /></a>
+								<a  class="body-part wrists" href="{{pathFor 'mainSymptomChecker' position='9' gender='F'}}"><area shape="rect" alt="" title="" coords="26,224,52,239" href="" target="" /></a>
+								<a  class="body-part wrists" href="{{pathFor 'mainSymptomChecker' position='9' gender='F'}}"><area shape="rect" alt="" title="" coords="195,222,222,237" href="" target="" /></a>
+								<a  class="body-part hands" href="{{pathFor 'mainSymptomChecker' position='14' gender='F'}}"><area shape="rect" alt="" title="" coords="10,243,44,282" href="" target="" /></a>
+								<a  class="body-part hands" href="{{pathFor 'mainSymptomChecker' position='14' gender='F'}}"><area shape="rect" alt="" title="" coords="202,242,238,279" href="" target="" /></a>
+								<!-- Created by Online Image Map Editor (http://www.maschek.hu/imagemap/index) -->
+							</map>
+							<map id="imgmap2015624115034" name="symptoms-areas-man-back">
+								<a class="body-part back" href="{{pathFor 'mainSymptomChecker' position='12' gender='M'}}"><area shape="rect" alt="" title="" coords="70,84,173,221" href="" target="" /></a>
+								<a class="body-part back" href="{{pathFor 'mainSymptomChecker' position='16' gender='M'}}"><area shape="rect" alt="" title="" coords="76,227,164,280" href="" target="" /></a>
+								<!-- Created by Online Image Map Editor (http://www.maschek.hu/imagemap/index) -->
+							</map>
+							<map id="imgmap2015624115437" name="symptoms-areas-woman-back">
+								<a class="body-part back" href="{{pathFor 'mainSymptomChecker' position='12' gender='F'}}"><area shape="rect" alt="" title="" coords="86,87,162,211" href="" target="" /></a>
+								<a class="body-part back" href="{{pathFor 'mainSymptomChecker' position='16' gender='F'}}"><area shape="rect" alt="" title="" coords="84,214,165,262" href="" target="" /></a>
+								<!-- Created by Online Image Map Editor (http://www.maschek.hu/imagemap/index) -->
+							</map>
+
 					</span>
 				</div>
 

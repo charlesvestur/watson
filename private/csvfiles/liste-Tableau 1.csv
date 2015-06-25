@@ -6,7 +6,7 @@ VIH;Fièvre (1);Ganglions (1);Eruption cutanée diffuse (10);Douleurs musculaire
 Hypertension artérielle ;Mal de tête (6|diffus);Acouphènes (12);Saignement de nez (6/5);;;;;;;;;;31,00 %;
 Dyslipidémie;Dépôt jaune pâle palpébral (6/13);Infiltrat cutané jaunâtre (10);;;;;;;;;Surpoids;;40,00 %;
 Artériopathie oblitérante des membres inférieurs;Douleur membres inférieurs à l'effort (7);Douleurs nocturnes de repos membres inférieurs (7);Impuissance (11);Peau froide (7);;;;;;;Tabac;180000;;
-Insuffisance Veineuse / Varices;Jambes lourdes (7);Crampes (7);Nécessité de mouvement (7);Varices (7);Oedèmes le soir (7);Douleur le long d'un trajet veineux (7);Troubles cutanés (7);;;;Surpoids / Travail debout / Femme;;41,00 %;
+Insuffisance Veineuse, Varices;Jambes lourdes (7);Crampes (7);Nécessité de mouvement (7);Varices (7);Oedèmes le soir (7);Douleur le long d'un trajet veineux (7);Troubles cutanés (7);;;;Surpoids / Travail debout / Femme;;41,00 %;
 Bronchite aïgue;Toux sèche (3);Toux sèche puis humide (3);Crachats lors de la toux (3);Fièvre (1);;;;;;;Epidémie / Tabagisme / Rhinopharyngite récente;10000000;;
 Pneumopathie aïgue;Toux (3);Difficultés à respirer (3);Douleur thoracique (3);Crachats lors de la toux (3);Fièvre (1);Frissons (1);;;;;;500000;;
 Angor d'effort;Douleur thoracique (3);Impossibilité de respirer lors d'un effort (3);;;;;;;;;;;1,60 %;
@@ -17,22 +17,22 @@ Salpingite aïgue;Douleur pelvienne (11);Pertes vaginales sales (11)[F];Saigneme
 Mycose Vaginale;Ecoulement blanchâtre (11);Démangeaisons vaginales (11)[F];Douleur lors des rapports sexuels (11);;;;;;;;Antiobiotiques récents ;1000000;;
 Infection vaginale;Pertes vaginales sales (11)[F];;;;;;;;;;;;;
 Paludisme ;Fièvre (1);Mal de tête (6|diffus);Douleurs articulaires diffuses (1);Douleurs musculaires diffuses (1);Douleur abdominale (2/0);Nausées (2);Vomissements (2);Diarrhée (2);;;Retour de voyage;5000;;
-Infection urinaire basse (cystite);Brûlures urinaires (11);Douleur urinaire (11);Besoin d'uriner fréquent et urgent (11);Urines foncées ou troubles (11);Sang dans les urines (11);;;;;;Femmes uniquement, si homme: prostatite;900000;;
-Pyélonéphrite;?Infection urinaire basse (cystite);Douleur lombaire (12);Fièvre (1);;;;;;;;;;;
-Prostatite aïgue;?Infection urinaire basse (cystite);Difficultés à uriner (11);Fièvre (1);Douleur pelvienne (11);;;;;;;;;3,00 %;
-Prostatite chronique ;?Infection urinaire basse (cystite);Pesanteur pelvienne (11);Poussées de fièvre résolutives (1);;;;;;;;;;6,00 %;
+Infection urinaire basse - Cystite;Brûlures urinaires (11);Douleur urinaire (11);Besoin d'uriner fréquent et urgent (11);Urines foncées ou troubles (11);Sang dans les urines (11);;;;;;Femmes uniquement, si homme: prostatite;900000;;
+Pyélonéphrite;?Infection urinaire basse - Cystite;Douleur lombaire (12);Fièvre (1);;;;;;;;;;;
+Prostatite aïgue;?Infection urinaire basse - Cystite;Difficultés à uriner (11);Fièvre (1);Douleur pelvienne (11);;;;;;;;;3,00 %;
+Prostatite chronique ;?Infection urinaire basse - Cystite;Pesanteur pelvienne (11);Poussées de fièvre résolutives (1);;;;;;;;;;6,00 %;
 Hypertrophie bénigne de prostate;Jet urinaire haché (11);Nécessité de pousser pour uriner (11);Gouttes d'urines retardataires (11);Sensation de vidange incomplète (11);;;;;;;;;;
-Grossesse;Absence de règles (11)[F];Nausées (2);Humeur labile (1);Test de grossesse positif (11)[F];Seins tendus (3);;;;;;Rapport sexuel à risque ;;;
+Grossesse;Absence de règles (11)[F];Nausées (2);Humeur labile (1);Test de grossesse positif (11)[F];Tension mammaire (3)[F];;;;;;Rapport sexuel à risque ;;;
 Grossesse extra utérine;?Grossesse;Douleur pelvienne (11|latéralisée);Saignement vaginal (11)[F];Test de grossesse positif (11)[F];;;;;;;Rapport sexuel à risque ;;;
 Pathologies annexielles;Douleur pelvienne (11|latéralisée);;;;;;;;;;;;;
 Endométriose ;Douleur pelvienne (11|cyclique);Règles non régulières (11)[F];Douleur lors des rapports sexuels (11);Douleur abdominale (2);Infertilité (11);;;;;;;;;
-Syndrôme pré-menstruel;Tension mammaire (3);Douleur pelvienne (11);Humeur labile (1);;;;;;;;Précède l'apparition des régles ;;;
+Syndrôme pré-menstruel;Tension mammaire (3)[F];Douleur pelvienne (11);Humeur labile (1);;;;;;;;Précède l'apparition des régles ;;;
 Syndrôme inter-menstruel;Douleur pelvienne (11);;;;;;;;;;En milieu de cycle ;;;
 Angine;Mal à la gorge (6/4);Fièvre (1);Douleur lors de la déglutition (6/4);Fatigue (1);;;;;;;Proche atteint;8000000;;
 Sinusite aïgue ;Douleur sinus (6/5);Obstruction nasale (6/5);Nez qui coule (6/5);Fièvre (1);;;;;;;;;;
 Sinusite chronique ;Nez qui coule (6/5);Obstruction nasale (6/5);;;;;;;;;Depuis plus de 3 semaines;;;
 Appendicite ;Douleur abdominale (2/7);Fièvre (1);;;;;;;;;;;;
-Diverticulite / Sigmoïdite;Douleur abdominale (2/9);Fièvre (1);Nausées (2);Vomissements (2);Troubles du transit (2);;;;;;;;;Diverticulose
+Diverticulite Sigmoïdite;Douleur abdominale (2/9);Fièvre (1);Nausées (2);Vomissements (2);Troubles du transit (2);;;;;;;;;Diverticulose
 Syndrôme occlusif;Arrêt des matières et des gaz (2);Vomissements (2);Douleur abdominale (2/0);Abdomen gonflé (2);;;;;;;;;;
 Hernie de l'aine;Tuméfaction inguinale (2);;;;;;;;;;;;;Toux chronique / Constipation / Obésité 
 Hernie  étranglée;?Syndrôme occlusif;Tuméfaction inguinale (2);;;;;;;;;;;;

@@ -3,7 +3,10 @@ span.color-yellow {
 }
 
 .question-title-design {
-	font-size: 20px;
+  font-size: 20px;
+  display: inline-block;
+  margin-top: 10px;
+  max-width: 90%;
 }
 
 .options-question-design {
@@ -17,17 +20,15 @@ span.color-yellow {
 	float: right;
 }
 
-#size-collapsible-header {
-	height: 90px;
-}
-
 #question-block {
 	margin-top: 5px;
+	line-height: 180%;
 }
 
 .star {
 	float: right;
 	font-size: 20px;
+	margin-top: 10px;
 }
 
 span.glyphicon-star:before {

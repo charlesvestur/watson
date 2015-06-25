@@ -5,44 +5,58 @@ Template.registerHelper('numberOfAnswers', function() {
 );
 
 Template.questionsItem.helpers({
-/*    numberOfVotes: function() {        
-        var sumvotes = 0;
-        Answers.find({discussionId: this._id}).forEach(function(answer){
-            sumvotes = sumvotes + answer.votesCount;
-        });
-        return sumvotes;
-    },*/
-
     starstyle: function() {
-        if (Meteor.users.findOne({_id: Meteor.userId()}).discussionsFollowed.indexOf(this._id) > -1){
-            return 'color-yellow glyphicon-star';
-        }
-        else {
-            return '';
+        if(Meteor.user().discussionsFollowed){
+            if (Meteor.user().discussionsFollowed.indexOf(this._id) > -1){
+                return 'color-yellow glyphicon-star';
+            }
+            else {
+                return ''; 
+            }
         }
     },
-    //So that number of answers is correct even when an answer is deleted from Mongol
-    /*answersCountHelper: function() {
-        return Answers.find({discussionId: this._id}).count();
-    }*/
+    questionSymbol: function(){
+        if (this.category === 'Symptômes')
+            return 'fa fa-stethoscope';
+        else if (this.category === 'Consultation')
+            return 'fa fa-user-md';
+        else if (this.category === 'Traitement')
+            return 'fa-medkit';
+        else if (this.category === 'Convalescence')
+            return 'fa fa-bed';
+    }
 });
 
 Template.questionsItem.events({
     'click .star': function(e) {
         var starId = this._id;
-        var doc = Meteor.users.findOne({_id: Meteor.userId()});
-        if ($('#' + starId).hasClass("color-yellow")){
-
-            Meteor.users.update({_id: doc._id}, {$pull: {discussionsFollowed: this._id}});
-        }
+        //client-only code such as event handlers may only update or remove a single document at a time, specified by _id
+        if ($('#' + starId).hasClass("color-yellow"))
+            Meteor.users.update({_id: Meteor.userId()}, {$pull: {discussionsFollowed: this._id}});
+    
         else {
-            if (doc.discussionsFollowed){
-                Meteor.users.update({_id: doc._id}, {$push: {discussionsFollowed: this._id}});
-            }
-            else {
-                Meteor.users.update({_id: doc._id}, {$set: {discussionsFollowed: [this._id]}});
-            }
+            if (Meteor.user().discussionsFollowed)
+                Meteor.users.update({_id: Meteor.userId()}, {$push: {discussionsFollowed: this._id}});
+            else 
+                Meteor.users.update({_id: Meteor.userId()}, {$set: {discussionsFollowed: [this._id]}});
+
             e.stopPropagation();
+        }
+    },
+
+    'click .chevron': function(e) { 
+        if($(event.target).is('.fa-chevron-up')) {
+            $(event.target).toggleClass("fa-chevron-down fa-chevron-up");
+            $(event.target.parentElement).find('.collapse').slideToggle();
+            $(event.target.parentElement).toggleClass('selected'); 
+        } 
+        else {
+            $('.fa-chevron-up').parent().find('.collapse').slideToggle();
+            $('.fa-chevron-up').parent().removeClass('selected');
+            $('.fa-chevron-up').toggleClass('fa-chevron-up fa-chevron-down');
+            $(event.target).toggleClass("fa-chevron-down fa-chevron-up");
+            $(event.target.parentElement).find('.collapse').slideToggle();
+            $(event.target.parentElement).toggleClass('selected'); 
         }
     },
 

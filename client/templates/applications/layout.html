@@ -1,5 +1,21 @@
 <template name="layout">
   <html>
+  <!-- 
+  <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Roboto:400,300,500:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })(); 
+    </script>
+    -->
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -18,7 +34,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right" id="customized-navbar">
             <li><a class="color-grey-passive" href="{{pathFor 'home'}}">Accueil</a></li>
-            <li><a class="color-grey-passive" href="{{pathFor 'mainMyHealth'}}">A propos</a></li>
+            <li><a class="color-grey-passive" href="{{pathFor 'myInformation'}}">A propos</a></li>
             <li><a class="color-grey-passive" href="">FAQ</a></li>
             {{#if currentUser}}
               <li class="dropdown"> {{> notificationsList}}</li>

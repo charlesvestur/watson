@@ -1,20 +1,25 @@
 <template name="myDiscussionsFollowed">
+	<h2 class="color-blue-regular"> Discussions suivies </h2>
+	<span class="glyphicon glyphicon-star color-yellow star-illustration"></span>
 	<table class="table table-striped">
 		<thead>
 		<tr>
-			<th>Date</th>
-			<th>Symptômes</th>
-			<th>Accès<br/>au forum</th>
-			<th>Médecin<br/>consulté</th>
-			<th>Diagnostic</th>
-			<th>Convalescence</th>
 			<th></th>
+			<th>Date</th>
+			<th>Question</th>
+			<th>Accéder</th>
+			<th>Catégorie</th>
+			<th>#hashtags</th>
+			<th>Diagnostic</th>
 		</tr>
 		</thead>
 		<tbody>
-		{{#each item}}
-			{{> myHealthRecordItem}}
+		{{#each discussionsFollowed}}
+			{{> myDiscussionsFollowedItem}}
 		{{/each}}
+		{{#unless ready}}
+	        {{> spinner}}
+	    {{/unless}}
 		</tbody>
 	</table>
 </template>

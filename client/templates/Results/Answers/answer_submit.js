@@ -16,12 +16,13 @@ Template.answerSubmit.events({
 	    }
 
     //Then, we apply our discussionInsert function to the object 'answer'
-            Meteor.call('answerInsert', answer, function(error, answerId) {
-		      if (error){
-		        throwError(error.reason);
-		      } else {
-		        /*$answertext.val('');*/ //Responsible of the "Answertext is required" error
-		      }
+        Meteor.call('answerInsert', answer, function(error, answerId) {
+	      if (error){
+	        throwError(error.reason);
+	      } else {
+	        /*$answertext.val('');*/ //Responsible of the "Answertext is required" error
+	      }
 		});
+	Router.go('discussionPage', {_id: Template.currentData()._id});
 	}
 });

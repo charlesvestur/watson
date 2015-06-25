@@ -1,18 +1,28 @@
 Template.myHealthRecord.helpers({
 	item: function() {
-		var array = Meteor.users.findOne({_id: Meteor.userId()}).userSymptoms;
+		var check = Meteor.user().userSymptoms;
+		var array = Meteor.user().userSymptoms;
 		//So that symptoms which were not recorded in HealthRecord are not displayed
-		for (k=0; k < array.length; k++){
-			if (array[k].inHealthRecord === false)
-				array.splice(k,1);
+		if (array){
+			if (array.length > 0){
+				var n = 0; 
+				for (k=0; k < check.length; k++){
+					if (check[k].inHealthRecord === false) {
+						array.splice(k-n,1); //the var 'n' is here so that the correct array element is removed
+						n += 1;
+					}
+				}
+//				console.log(array);
+				if (array.length > 0){
+					//In order to have the most recent in first position
+					array.sort(function(a, b){
+						return (Number(b.submitted) - Number(a.submitted));
+					});
+				}
+			}
+			return array;
 		}
-		//In order to have the most recent in first position
-		for (i=0; i < (array.length)/2; i++){
-			j = array.length - 1 - i;
-			var a = array[i];
-			array[i] = array[j];
-			array[j] = a;
-		}
-		return array;
+		else
+			return [];
 	}
 });

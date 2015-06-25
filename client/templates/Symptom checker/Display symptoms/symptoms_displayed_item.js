@@ -1,7 +1,6 @@
 Template.symptomsDisplayedItem.helpers({
     symbolstyle: function() {
-    	var arr = Session.get("symptomsSelected");
-        if (arr.indexOf(this.name) > -1){
+        if (Session.get("symptomsSelected").indexOf(this.name) > -1){
             return 'glyphicon-ok color-blue-amaya';
         }
         else {
@@ -13,9 +12,8 @@ Template.symptomsDisplayedItem.helpers({
 
 Template.symptomsDisplayedItem.events({
 	'click .plus-symbol': function(e){
-		var plusId = this._id;
-		if ($('#' + plusId).hasClass("glyphicon-plus")){
-			var m = Session.get("symptomsSelected");
+		if (Session.get('symptomsSelected').indexOf(this.name) === -1){
+			var m = Session.get('symptomsSelected');
 			    m = _.extend([], m); //Creates a new array
 			    m.push(this.name);
 			    Session.setAuth('symptomsSelected', m);
@@ -23,7 +21,7 @@ Template.symptomsDisplayedItem.events({
 //In brief, in order to have the 'correct' behaviour, you'll need to clone the array, make the changes you want, and then do Session.set('foo', myCopiedArray).
 		}
 		else {
-			var a = Session.get("symptomsSelected");
+			var a = Session.get('symptomsSelected');
 			    a = _.extend([], a); 
 			var index = a.indexOf(this.name);
 				a.splice(index, 1);

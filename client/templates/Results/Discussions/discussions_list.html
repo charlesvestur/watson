@@ -7,10 +7,10 @@
       <a href="{{pathFor 'mainResults'}}">Best</a>
     </div>
 
-    {{#each discussions}}
-      {{> discussionsItem}}
-    {{/each}}
-
+      {{#each discussions}}
+        {{> discussionsItem}}
+      {{/each}}
+      
     {{#if nextPath}}
       <a class="load-more" href="{{nextPath}}">Charger plus de discussions</a>
     {{else}}

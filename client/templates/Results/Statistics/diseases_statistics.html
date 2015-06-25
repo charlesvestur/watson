@@ -16,9 +16,14 @@
 	</div>
 
 	<div id="graph-container">
-		{{#each disease}}
+		{{#each mainDiagnosis}}
 			{{> diseasesStatisticsItem}}
 		{{/each}}
+		<div id="secondary-diagnosis-container" style="display: {{displayOrNot}}">
+		{{#each secondaryDiagnosis}}
+			{{> diseasesStatisticsItem}}
+		{{/each}}
+		</div>
 	</div>
 	<div class="triangle-border top">
 		<div class="container-disease-statistics">
