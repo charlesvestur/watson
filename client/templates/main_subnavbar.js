@@ -10,6 +10,9 @@ UI.registerHelper("currentRouteName",function(){
 	   case "newDiscussions":
 	       className="results-active";
 	       break;	
+	   case "answerDiscussions":
+	       className="results-active";
+	       break;
 	   case "discussionSubmit":
 	       className="results-active";
 	       break;

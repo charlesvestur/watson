@@ -1,15 +1,1 @@
-#all-answers-headline {
-	display: inline-block;
-	font-size: 15px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	margin-left: 1rem;
-	vertical-align: middle;
-}
 
-#suggest-answer {
-	display: inline-block;
-	float: right;
-	font-size: 15px;
-	vertical-align: middle;
-}

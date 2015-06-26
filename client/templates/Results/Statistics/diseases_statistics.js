@@ -25,7 +25,8 @@ Template.diseasesStatistics.helpers({
 			}
 		}
 		mainDiagnosis.sort(function(a, b){return (b.coeff - a.coeff);});
-		if (mainDiagnosis.length < d.length){	
+		//Puts 'Autres' category if diseases with a coeff below minimumCoeff exist
+		if ((mainDiagnosis.length < d.length)&&(mainDiagnosis.length !== 0)){
 			mainDiagnosis.push({
 				disease: 'Autres',
 				coeff: othersCoeff  
@@ -42,6 +43,7 @@ Template.diseasesStatistics.helpers({
 			if(d[k].coeff < minimumCoeff)
 				secondaryDiagnosis.push(d[k]);
 		}
+		secondaryDiagnosis.sort(function(a, b){return (b.coeff - a.coeff);});
 		return secondaryDiagnosis;
 	},
 
@@ -55,12 +57,13 @@ Template.diseasesStatistics.helpers({
 
 	displayOrNot: function(){
 		var d = Session.get('diagnosis');
+		//Creates an array with all the diagnosis with a coeff ABOVE minimum coeff
 		var b = [];
 		for(k=0; k < d.length; k++){
 			if(d[k].coeff < minimumCoeff)
 				b.push(d[k].disease);
 		}
-		if ((b.indexOf(Session.get('diseaseSelected').disease) > -1)||(Session.get('diseaseSelected').disease === 'Autres'))
+		if ((b.indexOf(Session.get('diseaseSelected').disease) > -1)||(Session.get('diseaseSelected').disease === 'Autres')||(othersCoeff === 1))
 			return 'initial';
 		else
 			return 'none';

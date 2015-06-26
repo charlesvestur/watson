@@ -1,11 +1,18 @@
 <template name="discussionPage">
-<div class="collapsible" id="container-question-information">
-		{{> questionsItem}}
-	<div id="question-detailed">
-		<div class="color-blue-regular" id="question-headline-dp">Question détaillée</div>
-		<p id="question-text">{{question}}</p>
+	<div class="collapsible" id="container-question-information">
+			{{> questionsItem}}
+		<div id="question-detailed">
+			<div class="color-blue-regular" id="question-headline-dp">Question détaillée</div>
+			<p id="question-text">{{question}}</p>
+		</div>
+	</div>	
+	<div>
+		<div id="for-positionning-only">&nbsp;</div>
+		<div class="color-blue-regular" id="suggest-answer">Proposer une réponse!</div>
+		<div id='answer-submit-form' class='display-none'>
+			{{> answerSubmit}}
+		</div>
 	</div>
-</div>	
 	{{> yield region='discussionPageBody'}}
 	{{> yield region='discussionPageSubBody'}}
 </template>

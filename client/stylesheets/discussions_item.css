@@ -49,8 +49,22 @@ span.glyphicon-star:before {
 }
 
 #see-all-answers {
-	display: inline;
-	font-size: 12px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px 0 rgba(200,200,200,0.2);
+  display: inline-block;
+  font-weight: normal;
+  float: right;
+  outline: 0;
+  padding: 3px 7px 4px 7px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background: #f1f8fb;
+  color: #2b6dad;
+  border: 1px solid #bbcadc;
+  margin-right: 12px;
+  margin-top: 1px;
 }
 
 #best-answer-paragraph {

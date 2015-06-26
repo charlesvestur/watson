@@ -23,6 +23,7 @@ Template.answerSubmit.events({
 	        /*$answertext.val('');*/ //Responsible of the "Answertext is required" error
 	      }
 		});
-	Router.go('discussionPage', {_id: Template.currentData()._id});
+	$('#answer-submit-form').removeClass('display-none');
+//	Router.go('discussionPage', {_id: Template.currentData()._id});
 	}
 });

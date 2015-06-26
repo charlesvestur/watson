@@ -3,54 +3,71 @@
 	vertical-align: bottom;
 	margin: 0px;
 	padding: 0px;
-	font-size: 1rem;
+	font-size: 1rem; /*Trick to avoid space betwenn divs*/
 	cursor: pointer;
+}
+
+.not-selected-container {
+	overflow: hidden;
+}
+
+.selected-container {
+	overflow: visible;
 }
 
 .not-selected-disease-name {
 	display: inline-block;
-	font-size: 15px;
+	font-size: 1rem;
 	color:#979797;
+	padding: 0.1rem;
 }
+
+
 
 .selected-disease-name {
 	display: inline-block;
-	font-size: 15px;
+	font-size: 1rem;
 	color:#58B1DB;
+	position: relative;
+	background-color: white;
+	z-index: 10;
 }
 
 .not-selected-disease-chart {
 	width: 100%;
-	height: 40px;
-	border: 2px;
-	border-style: solid;
-	border-color: #757575;
+	height: 2.5rem;
+/*	border: 2px solid #757575; */
+	border-left: 1px solid #757575;
+	border-right: 1px solid #757575;
 	background-color: #E0E0E0;
 	margin-bottom: 15px;
+	padding: 0;
+	text-align: left;
+	border-radius: none;
+	transition: all .1s ease-out;
+}
+
+.not-selected-disease-chart:hover {
+	background-color: #58B1DB;
 }
 
 .selected-disease-chart {
 	width: 100%;
-	height: 40px;
-	border: 2px;
-	border-style: solid;
-	border-color: #00838f;
+	height: 2.7rem;
+/*	border: 2px solid #00838f; */
 	background-color: #58B1DB;
 	margin-bottom: 15px;
+	border: none;
 }
 
 .not-selected-disease-percentage {
-	display: block;
-	height: 30px;
-	margin-left: 5px;
-	font-size: 30px;
+	margin-left: 0.5rem;
+	font-size: 1rem;
 	color:#979797;
 }
 
 .selected-disease-percentage {
-	display: block;
-	height: 30px;
-	margin-left: 5px;
-	font-size: 30px;
+	margin-left: 0.5rem;
+	font-size: 1rem;
 	color:#FFFFFF;
 }

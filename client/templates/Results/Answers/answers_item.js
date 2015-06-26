@@ -1,9 +1,10 @@
 Template.answersItem.events({
   'click .upvote': function(e) {
   	var upvoteId = this._id;
-    if ($('#' + upvoteId + '1').hasClass('disabled-customized')){
-    	$('#' + upvoteId + '1').removeClass('disabled-customized');
-    	$('#' + upvoteId + '1').addClass('btn-primary upvotable');
+    var el = '#' + upvoteId + '-upvote';
+    if ($(el).hasClass('disabled-customized')){
+    	$(el).removeClass('disabled-customized');
+    	$(el).addClass('btn-primary upvotable');
       Meteor.call('cancelupvote', this._id);
     }
     else {
@@ -11,23 +12,30 @@ Template.answersItem.events({
     } 
   },
 
+  'click .link-comment': function(e) {
+    var containerId = this._id;
+    var el = '#' + containerId + '-comment';
+    if ($(el).hasClass('display-none'))
+      $(el).removeClass('display-none'); 
+    else 
+      $(el).addClass('display-none');
+    },
+
   'click .link-see-comments': function(e) {
     var containerId = this._id;
-  	if ($('#' + containerId + '2').hasClass('display-none'))
-  		{
-  		$('#' + containerId + '2').removeClass('display-none');
-		}  	
-  	else {
-  		$('#' + containerId + '2').addClass('display-none');
-  		}
-  	},
+    var el = '#' + containerId + '-see-comments';
+    if ($(el).hasClass('display-none'))
+      $(el).removeClass('display-none'); 
+    else 
+      $(el).addClass('display-none');
+    },
 
   'click #delete-answer': function(e) {
       if (confirm("Supprimer cette réponse ?")) {
         var currentAnswerId = this._id;
         Answers.remove(currentAnswerId);
         Discussions.update(this.discussionId, {$inc: {answersCount: -1}});
-        Router.go('mainResults');
+//        Router.go('discussionPage', {_id: Template.currentData()._id});
       }
     }
 });

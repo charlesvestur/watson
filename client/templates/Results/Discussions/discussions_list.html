@@ -1,22 +1,39 @@
 <template name="discussionsList">
   <div class="discussions">
-    <div>
-      <a href="{{pathFor 'newDiscussions'}}">New</a>
-    </div>
-    <div>
-      <a href="{{pathFor 'mainResults'}}">Best</a>
-    </div>
+      <span class="color-blue-regular" id="introduction-text"> 
+      {{pluralize nbOfDiscussions "discussion"}} correspondent à vos symptômes et critères de recherche<br/>
+      Vous ne trouvez pas la réponse à votre question ?
+      </span>
 
-      {{#each discussions}}
-        {{> discussionsItem}}
-      {{/each}}
-      
-    {{#if nextPath}}
-      <a class="load-more" href="{{nextPath}}">Charger plus de discussions</a>
-    {{else}}
-      {{#unless ready}}
-        {{> spinner}}
-      {{/unless}}
-    {{/if}}
+      <button id='discussion-submit-button'>
+        <a href="{{pathFor 'discussionSubmit'}}" id="discussion-submit-link">Posez une question!</a>
+      </button>
+
+      <div class='filters-categories-div' id="show-categories-div">
+          <i class="fa fa-chevron-down" id='chevron-categories'></i><span class='filters-categories-text' id="show-categories-text">Afficher les catégories</span>
+      </div>
+      <div class="display-none" id="categories-container">
+      TEST
+      </div>
+
+      <div class='filters-categories-div' id="more-filters-div">
+          <i class="fa fa-chevron-down" id='chevron-filters'></i><span class='filters-categories-text' id="more-filters-text">Plus de filtres</span>
+      </div>
+
+      <div class="display-none" id="filters-container">    
+          <a href="{{pathFor 'newDiscussions'}}"><div class="discussions-filter {{filterStyleDate}}" id='sort-date'>Trier par date</div></a>
+          <a href="{{pathFor 'mainResults'}}"><div class="discussions-filter {{filterStyleVote}}" id="sort-votes">Trier par nombre de votes</div></a>
+          <a href="{{pathFor 'answerDiscussions'}}"><div class="discussions-filter {{filterStyleAnswer}}" id='sort-answer'>Trier par nombre de réponses</div></a>
+      </div>
+        {{#each discussions}}
+          {{> discussionsItem}}
+        {{/each}}
+        {{#if nextPath}}
+          <a class="load-more" href="{{nextPath}}">Charger plus de discussions</a>
+        {{else}}
+          {{#unless ready}}
+            {{> spinner}}
+          {{/unless}}
+        {{/if}}
   </div>
 </template>
